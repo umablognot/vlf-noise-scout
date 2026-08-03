@@ -4,6 +4,7 @@ import asyncio
 import queue
 import subprocess
 import threading
+from collections import deque
 from collections.abc import AsyncIterator
 
 import numpy as np
@@ -14,10 +15,21 @@ class ListenerLimitReached(RuntimeError):
 
 
 class BroadcastHub:
-    def __init__(self, max_listeners: int) -> None:
+    """Fans encoded audio out to listeners.
+
+    Keeps a rolling backlog of the most recent MP3 bytes and replays it to
+    every new subscriber (burst-on-connect). The burst lets players start
+    immediately and pushes the response past proxy buffering thresholds
+    (e.g. Cloudflare) that would otherwise hold a slow live stream back.
+    """
+
+    def __init__(self, max_listeners: int, burst_bytes: int = 288 * 1024) -> None:
         self.max_listeners = max_listeners
+        self.burst_bytes = burst_bytes
         self._loop: asyncio.AbstractEventLoop | None = None
         self._clients: set[asyncio.Queue[bytes]] = set()
+        self._backlog: deque[bytes] = deque()
+        self._backlog_size = 0
 
     def attach_loop(self, loop: asyncio.AbstractEventLoop) -> None:
         self._loop = loop
@@ -29,7 +41,11 @@ class BroadcastHub:
     def subscribe(self) -> asyncio.Queue[bytes]:
         if len(self._clients) >= self.max_listeners:
             raise ListenerLimitReached
-        client: asyncio.Queue[bytes] = asyncio.Queue(maxsize=96)
+        client: asyncio.Queue[bytes] = asyncio.Queue(
+            maxsize=len(self._backlog) + 96
+        )
+        for chunk in self._backlog:
+            client.put_nowait(chunk)
         self._clients.add(client)
         return client
 
@@ -46,6 +62,10 @@ class BroadcastHub:
             self._loop.call_soon_threadsafe(self._publish, chunk)
 
     def _publish(self, chunk: bytes) -> None:
+        self._backlog.append(chunk)
+        self._backlog_size += len(chunk)
+        while self._backlog_size > self.burst_bytes and len(self._backlog) > 1:
+            self._backlog_size -= len(self._backlog.popleft())
         for client in tuple(self._clients):
             if client.full():
                 try:
@@ -122,11 +142,8 @@ class MP3Encoder:
         self.stderr_reader.start()
 
     def write(self, samples: np.ndarray) -> None:
-        # Leave each encoder idle until somebody requests its stream.
-        # The capture/DSP pipeline keeps running, so a new listener still gets
-        # fresh audio immediately without paying for two always-on encoders.
-        if self.hub.listener_count == 0:
-            return
+        # Encoders run even with zero listeners so the hub always holds a
+        # warm burst backlog for the next subscriber.
         if not self.process or not self.process.stdin:
             return
         payload = np.asarray(samples, dtype="<f4").tobytes()

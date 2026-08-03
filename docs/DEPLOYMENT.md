@@ -100,9 +100,12 @@ Uzun süreli yayın için PC tarafında:
 ## 6. Kapasite
 
 64 kbit/s akışta varsayılan 12 eşzamanlı dinleyici yaklaşık
-0.8 Mbit/s ses yükü oluşturur; HTTP/Tunnel ek yükü ayrıca gelir. Her MP3
-kodlayıcı yalnızca kendi kanalında en az bir dinleyici varken veri işler. Ev
-bağlantısının upload kapasitesine göre `VLF_MAX_LISTENERS` değerini düşür.
+0.8 Mbit/s ses yükü oluşturur; HTTP/Tunnel ek yükü ayrıca gelir. MP3
+kodlayıcılar sürekli çalışır ve son ~290 KB tamponda tutulur: yeni dinleyici
+bu tamponu anında alır (burst-on-connect), böylece çalma hemen başlar ve
+Cloudflare gibi ara katmanların tamponlama eşiği ilk saniyede aşılır. Ses bu
+yüzden canlının ~30 saniye gerisindedir. Ev bağlantısının upload kapasitesine
+göre `VLF_MAX_LISTENERS` değerini düşür.
 
 ## 7. Gizlilik
 
