@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Kayitlar / olcumler (buyuk dosyalar)
+*.wav
+*.webm
+*.mp3
+!web/**/*.mp3
+
+# Isletim sistemi
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Ortam
+.env

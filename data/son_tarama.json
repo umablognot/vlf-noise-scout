@@ -1,0 +1,17 @@
+{
+  "scanned_at": "2026-08-03T14:20:00",
+  "seconds": 60.0,
+  "sample_rate": 96000,
+  "results": [
+    {"call": "Alpha F1", "freq_hz": 11905.0, "snr": 12.3},
+    {"call": "Alpha F2", "freq_hz": 12649.0, "snr": 11.7},
+    {"call": "Alpha F3", "freq_hz": 14881.0, "snr": 8.6},
+    {"call": "GBZ", "freq_hz": 19580.0, "snr": 6.9},
+    {"call": "ICV", "freq_hz": 20270.0, "snr": 5.1},
+    {"call": "HWU", "freq_hz": 21750.0, "snr": 8.0},
+    {"call": "DHO38", "freq_hz": 23400.0, "snr": 6.6},
+    {"call": "NAA", "freq_hz": 24000.0, "snr": 5.8},
+    {"call": "TBB", "freq_hz": 26700.0, "snr": 6.6},
+    {"call": "TFK/NRK", "freq_hz": 37500.0, "snr": 4.7}
+  ]
+}

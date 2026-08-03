@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VLF Noise Scout — ev yapımı doğal radyo istasyonu</title>
+<meta name="description" content="Ankara'dan canlı VLF doğal radyo yayını: sferic, tweek, whistler. Ev yapımı iki kanallı aktif anten ve adaptif gürültü iptali." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <span class="live-dot" id="live-dot"></span>
+      <div>
+        <h1>VLF Noise Scout</h1>
+        <p class="tag" data-i18n="tagline">Ankara'dan canlı doğal radyo yayını</p>
+      </div>
+    </div>
+    <div class="segmented" id="lang-box">
+      <button data-lang="tr" class="active" type="button">TR</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+  </header>
+
+  <section class="panel">
+    <div class="player-row">
+      <button id="play" class="play" type="button" aria-label="Play">▶</button>
+      <div class="player-meta">
+        <div class="segmented big" id="chan-box">
+          <button data-chan="clean" class="active" type="button" data-i18n="chanClean">Temiz</button>
+          <button data-chan="raw" type="button" data-i18n="chanRaw">Ham</button>
+        </div>
+        <p class="hint" id="player-hint" data-i18n="hintClean">Adaptif iptal açık — ortak parazit çıkarıldı</p>
+      </div>
+      <div class="vol">
+        <label for="volume" data-i18n="volume">Ses</label>
+        <input id="volume" type="range" min="0" max="100" value="80" />
+      </div>
+    </div>
+    <p class="status-line" id="status-line">—</p>
+  </section>
+
+  <section class="metrics">
+    <div class="metric"><span class="label" data-i18n="mAdaptive">Adaptif iptal</span><span class="value" id="m-cancel">—</span></div>
+    <div class="metric"><span class="label" data-i18n="mBand">Bant filtresi</span><span class="value" id="m-band">—</span></div>
+    <div class="metric"><span class="label" data-i18n="mCoh">Referans eşleşmesi</span><span class="value" id="m-coh">—</span></div>
+    <div class="metric"><span class="label" data-i18n="mUp">Çalışma süresi</span><span class="value" id="m-up">—</span></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div><span class="kicker">SPEKTRUM</span><h2 data-i18n="specTitle">Anlık spektrum</h2></div>
+    </div>
+    <canvas id="spectrum"></canvas>
+    <div class="axis" id="spec-axis"><span>0</span><span>2k</span><span>4k</span><span>6k</span><span>8k</span><span>10k</span><span>12kHz</span></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head wrapping">
+      <div><span class="kicker">WATERFALL</span><h2 data-i18n="wfTitle">Zaman · frekans şelalesi</h2></div>
+      <div class="controls">
+        <div class="segmented" id="wf-mode">
+          <button data-mode="olay" class="active" type="button" data-i18n="modeEvent">Olay</button>
+          <button data-mode="ham" type="button" data-i18n="modeAll">Tümü</button>
+        </div>
+        <div class="segmented" id="wf-zoom">
+          <button data-max="12000" type="button">12k</button>
+          <button data-max="6000" type="button">6k</button>
+          <button data-max="3000" class="active" type="button">3k</button>
+        </div>
+        <div class="segmented" id="wf-speed">
+          <button data-speed="1" type="button">1×</button>
+          <button data-speed="2" class="active" type="button">2×</button>
+          <button data-speed="4" type="button">4×</button>
+          <button data-speed="8" type="button">8×</button>
+        </div>
+        <div class="segmented"><button id="wf-jmode" type="button" data-i18n="jmode">J avı</button></div>
+        <div class="segmented"><button id="wf-freeze" type="button" data-i18n="freeze">Dondur</button></div>
+      </div>
+    </div>
+    <div class="split">
+      <div class="split-main">
+        <div class="wf-wrap">
+          <canvas id="waterfall"></canvas>
+          <div class="wf-labels" id="wf-labels" aria-hidden="true"></div>
+          <div class="wf-badge" id="wf-badge"><span id="wf-count">0</span> <span data-i18n="perMin">olay/dk</span></div>
+        </div>
+      </div>
+      <div class="split-side">
+        <div class="side-head">
+          <span class="kicker" data-i18n="lxKicker">CANLI YILDIRIM HARİTASI</span>
+          <div class="segmented" id="lx-zoom">
+            <button data-z="tr" class="active" type="button" data-i18n="lxTR">Türkiye</button>
+            <button data-z="eu" type="button" data-i18n="lxEU">Avrupa</button>
+          </div>
+        </div>
+        <div class="lx-wrap" id="lx-wrap">
+          <iframe id="lx-frame" title="Live lightning map" loading="lazy" referrerpolicy="no-referrer" src="about:blank"></iframe>
+          <div class="lx-fallback" id="lx-fallback">
+            <p data-i18n="lxFallback">Harita burada gömülü olarak açılamadı.</p>
+            <a class="btn" id="lx-link" href="https://map.blitzortung.org/#6/39.2/35.2" target="_blank" rel="noopener" data-i18n="lxOpen">Haritayı yeni sekmede aç</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="note" data-i18n="lxNote">Duyduğunuz her <b>sferic</b>, haritadaki bir yıldırım deşarjının radyo darbesidir. Yakın fırtınalar keskin çıtırtı, uzaktakiler yumuşak patırtı olarak gelir. Harita sessizse bant da sessiz olur — o yüzden en iyi dinleme, bölgede aktivite varken yapılır. Veri: <a href="https://www.blitzortung.org/" target="_blank" rel="noopener">Blitzortung.org</a> gönüllü ağı.</p>
+    <p class="note" data-i18n="wfNote"><b>Olay</b> modunda sabit uğultu öğrenilip silinir; ekranda yalnızca gerçek darbeler kalır. Sferic dikey bir çizgidir. <b>J avı</b> düğmesi analiz penceresini kısaltıp akışı hızlandırır: tweek 50–100 ms sürdüğü için ancak bu ayarda kuyruğu yatayda yayılır ve ~1.7 kHz'e kıvrılan <b>&quot;J&quot;</b> görünür hale gelir. Tweek yalnızca gece oluşur.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head wrapping">
+      <div><span class="kicker" data-i18n="recKicker">GERİYE DÖNÜK KAYIT</span><h2 data-i18n="recTitle">Son 60 saniyeyi yakala</h2></div>
+      <div class="controls">
+        <button id="grab-audio" class="btn" type="button" data-i18n="recAudio">Sesi indir</button>
+        <button id="grab-image" class="btn" type="button" data-i18n="recImage">Şelaleyi indir</button>
+      </div>
+    </div>
+    <p class="note" id="rec-note" data-i18n="recNote">Yayın çalarken son 60 saniye sürekli tamponlanır; ilginç bir şey duyduğunuzda butona basmanız yeterli.</p>
+  </section>
+
+<section class="panel">
+    <div class="panel-head wrapping">
+      <div><span class="kicker" data-i18n="txKicker">UZAK VERİCİLER</span><h2 data-i18n="txTitle">Bu istasyon şunları yakaladı</h2></div>
+      <span class="scan-meta" id="scan-meta"></span>
+    </div>
+    <div class="tx-summary" id="tx-summary"></div>
+    <div class="tx-table" id="tx-table"></div>
+    <p class="note" data-i18n="txNote">Bu vericiler binlerce kilometre ötede ve hepsi kulağın duyamayacağı kadar yüksek frekansta — duyulmazlar, <b>ölçülürler</b>. Aşağıdaki tablo, bir paspas sopası ve pil beslemeli iki transistörlü bir devrenin Rusya, Fransa, İngiltere, Almanya, ABD ve Türkiye vericilerini aynı anda algıladığını gösteriyor: sistemin çalıştığının doğrudan kanıtı.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div><span class="kicker" data-i18n="guideKicker">NE DUYUYORUM?</span><h2 data-i18n="guideTitle">Sesleri tanıma rehberi</h2></div></div>
+    <div class="cards" id="guide-cards"></div>
+  </section>
+
+  <footer class="foot">
+    <p data-i18n="footHw">Donanım: metal sopa anten + 10 cm referans prob · 2N5457 JFET + TL072 · pil beslemeli · PC hat girişi</p>
+    <p><span data-i18n="footSafety">Bu bir alıcıdır, verici değildir. Antenler bina içindedir.</span></p>
+  </footer>
+
+</div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

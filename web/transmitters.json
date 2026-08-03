@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "scanned_at": "2026-08-03T14:20:00",
+    "seconds": 60.0,
+    "sample_rate": 96000
+  },
+  "stations": [
+    {
+      "call": "Alpha F1",
+      "freq_hz": 11905.0,
+      "country": "RU",
+      "note_tr": "RSDN-20 seyrüsefer",
+      "note_en": "RSDN-20 navigation",
+      "snr_db": 12.3,
+      "verdict": "seen"
+    },
+    {
+      "call": "Alpha F2",
+      "freq_hz": 12649.0,
+      "country": "RU",
+      "note_tr": "RSDN-20 seyrüsefer",
+      "note_en": "RSDN-20 navigation",
+      "snr_db": 11.7,
+      "verdict": "seen"
+    },
+    {
+      "call": "Alpha F3",
+      "freq_hz": 14881.0,
+      "country": "RU",
+      "note_tr": "RSDN-20 seyrüsefer",
+      "note_en": "RSDN-20 navigation",
+      "snr_db": 8.6,
+      "verdict": "trace"
+    },
+    {
+      "call": "GBZ",
+      "freq_hz": 19580.0,
+      "country": "GB",
+      "note_tr": "Anthorn deniz üssü",
+      "note_en": "Anthorn naval station",
+      "snr_db": 6.9,
+      "verdict": "trace"
+    },
+    {
+      "call": "ICV",
+      "freq_hz": 20270.0,
+      "country": "IT",
+      "note_tr": "Tavolara deniz üssü",
+      "note_en": "Tavolara naval station",
+      "snr_db": 5.1,
+      "verdict": "trace"
+    },
+    {
+      "call": "HWU",
+      "freq_hz": 21750.0,
+      "country": "FR",
+      "note_tr": "Rosnay deniz üssü",
+      "note_en": "Rosnay naval station",
+      "snr_db": 8.0,
+      "verdict": "trace"
+    },
+    {
+      "call": "DHO38",
+      "freq_hz": 23400.0,
+      "country": "DE",
+      "note_tr": "Rhauderfehn deniz üssü",
+      "note_en": "Rhauderfehn naval station",
+      "snr_db": 6.6,
+      "verdict": "trace"
+    },
+    {
+      "call": "NAA",
+      "freq_hz": 24000.0,
+      "country": "US",
+      "note_tr": "Cutler, Maine",
+      "note_en": "Cutler, Maine",
+      "snr_db": 5.8,
+      "verdict": "trace"
+    },
+    {
+      "call": "TBB",
+      "freq_hz": 26700.0,
+      "country": "TR",
+      "note_tr": "Bafa — Türkiye vericisi",
+      "note_en": "Bafa — Turkish transmitter",
+      "snr_db": 6.6,
+      "verdict": "trace"
+    },
+    {
+      "call": "TFK/NRK",
+      "freq_hz": 37500.0,
+      "country": "IS",
+      "note_tr": "Grindavík",
+      "note_en": "Grindavík",
+      "snr_db": 4.7,
+      "verdict": "none"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+group,reference,quantity,value_or_model,specification,required,notes
+compute,PC,1,"PC with a stereo Line-In (blue) jack",Windows 10/11 tested,yes,"Onboard Realtek line input is sufficient; 96 kHz capable inputs also enable the transmitter scan"
+audio,ADC,1,"USB audio adapter with true stereo Line-In (only if the PC lacks a Line-In jack)",independent LINL and LINR routed to the jack,no,"Verify with server/tools/probe_check.py before building anything; most cheap dongles are mono microphone only"
+audio,J1,1,3.5mm TRS plug or cable,shielded stereo,yes,"Tip=main ring=reference sleeve=ground"
+stage1,Q1-Q2,2,2N5457,N-channel JFET,yes,"Buy 4 for spares; verify pinout from seller datasheet; J201/BF245B/2SK170 also work after retuning R5"
+stage1,R1-R2,2,1M ohm,1/4W metal film,yes,antenna series resistor
+stage1,R3-R4,4,10M ohm,1/4W,yes,"two in series per channel = 20M gate bias; a single 22M or 47M also works and slightly extends the low-frequency response"
+stage1,R5-R6,2,510 ohm,1/4W metal film,yes,"source resistor as built; retune (1k-4.7k) so drain sits at 40-70 percent of supply"
+stage1,R7-R8,2,20k ohm,1/4W metal film,yes,drain load
+stage1,C5-C6,2,1uF,film or bipolar,yes,"partial source bypass; gives band gain while keeping 50Hz gain low"
+stage2,U1,1,TL072,dual JFET-input op-amp,yes,"one package serves both channels; use TL062 or NE5532 if running from a single 9V"
+stage2,SOCKET,1,8-pin DIP socket,,no,"lets you swap the op-amp without desoldering"
+stage2,C4A-C4B,2,4.7nF,film,yes,"high-pass into the gain stage, corner near 280Hz"
+stage2,R12A-R12B,2,100k ohm,1/4W metal film,yes,non-inverting input bias to Vmid
+stage2,R14A-R14B,2,100k ohm trimmer potentiometer,multiturn preferred,yes,"per-channel gain trim, 1 to 101"
+stage2,R13A-R13B,2,1k ohm,1/4W metal film,yes,gain-setting leg
+stage2,C7A-C7B,2,470nF,film,yes,"rolls gain down to unity below 340Hz, suppresses mains"
+stage2,R15A-R15B,2,1k ohm,1/4W metal film,yes,output series protection
+stage2,C8A-C8B,2,1uF,film or bipolar,yes,output DC blocking into Line-In
+supply,R20-R21,2,10k ohm,1/4W metal film,yes,rail splitter for Vmid
+supply,C10,1,100uF,electrolytic 25V,yes,Vmid decoupling
+supply,C11,1,100uF,electrolytic 25V,yes,supply bulk decoupling
+supply,C3,1,100nF,ceramic,yes,supply bypass close to the op-amp pins
+supply,BATT,1,8xAA battery holder,12V from alkaline cells,yes,"about 30 days runtime; a 9V block works for prototyping but lasts around 6 days"
+supply,SW1,1,SPST switch,,no,
+mechanical,BOARD,1,perfboard,at least 7x9cm,yes,"breadboard is fine for the first test, perfboard for unattended operation"
+mechanical,BOX,1,small plastic enclosure,,yes,
+mechanical,WIRE,1,jumper wire set,,no,
+antenna,MAIN,1,metal mop handle,0.8-1.5m indoors,yes,
+antenna,REF,1,insulated copper wire,10-20cm,yes,noise-scout probe
+antenna,SHIELD,1,aluminium foil on cardboard,30x50cm,no,grounded room-side electrostatic screen
+cable,AUDIO,1,shielded stereo cable,2-3m,no,keeps PC RF away from the main antenna
+cable,ETH,1,Ethernet cable,,no,recommended for a 7-10 day stream
+tools,DMM,1,multimeter,DC volts and resistance,yes,required for the drain bias check
+protection,D1-D4,4,BAV199,low-leakage clamp diodes,no,"optional ESD protection; adds gate capacitance"
+suppression,FERRITE,1,clip-on ferrite,for USB/Ethernet cable,no,
