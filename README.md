@@ -9,13 +9,13 @@ parçayla kuruldu.
 > as the main E-field antenna and about €20 of components.
 > See [README.en.md](README.en.md).
 
-> **📡 Canlı yayın penceresi:** İstasyon **3–10 Ağustos 2026** tarihleri arasında
-> kesintisiz yayındadır. **10 Ağustos 2026'da yayın kapatılacaktır.** Kod ve
-> dokümanlar kalıcıdır; istasyonu kendi donanımınızla her zaman kurabilirsiniz.
+> **📡 Canlı yayın sonlandı:** İstasyonun canlı yayını **7 Ağustos 2026**
+> tarihinde sonlandırılmıştır. Kod ve dokümanlar kalıcıdır; istasyonu kendi
+> donanımınızla her zaman kurabilirsiniz.
 >
-> **Live window:** the station streams continuously from **3 to 10 August 2026**
-> and goes offline on **10 August 2026**. The code and docs stay; you can build
-> your own station any time.
+> **The live stream has ended:** the station went offline on
+> **7 August 2026**. The code and docs stay; you can build your own station
+> any time.
 
 ---
 

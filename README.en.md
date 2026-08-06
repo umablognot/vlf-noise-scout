@@ -1,8 +1,8 @@
 # VLF Noise Scout
 
-> **📡 Live broadcast window:** the station streams continuously from
-> **3 to 10 August 2026** and will go **offline on 10 August 2026**. The code
-> and documentation are permanent; you can build your own station any time.
+> **📡 The live stream has ended:** the station went offline on
+> **7 August 2026**. The code and documentation are permanent; you can build
+> your own station any time.
 
 **A homemade dual-channel VLF natural-radio receiving station with a live web stream.**
 Built in a flat in Ankara, Türkiye, using a metal mop handle as the main antenna
