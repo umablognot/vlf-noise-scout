@@ -1,0 +1,419 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: Русский <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "Естественное радио из Анкары в прямом эфире"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "Обработанный"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "Исходный"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "Громкость"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "Адаптивное подавление включено — общие помехи убраны"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "Исходный сигнал антенны — без обработки"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "Адаптивное подавление"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "Полосовой фильтр"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "Согласование опоры"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "Время работы"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "Спектр"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "Спектр в реальном времени"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "Водопад"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "Водопад: время · частота"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "События"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "Все"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "Пауза"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "Продолжить"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "событий/мин"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "Охота за J"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "Охота за J ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "Нажмите ▶, чтобы запустить водопад"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"Режим <b>События</b> запоминает ровный шумовой фон и вычитает его — остаются "
+"только настоящие импульсы; сферик выглядит как вертикальная линия. Кнопка "
+"<b>Охота за J</b> укорачивает окно анализа и ускоряет прокрутку: твик длится "
+"50–100 ms, и только в этом режиме его хвост растягивается по горизонтали и "
+"показывает <b>J</b>-образный крючок около 1,7 кГц. Твики случаются только "
+"ночью."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "Запись задним числом"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "Поймать последние 60 секунд"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "Скачать звук"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "Скачать водопад"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"Пока идёт поток, последние 60 секунд непрерывно пишутся в буфер — нажимайте "
+"кнопку, когда услышите что-то интересное."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "Буфер ещё заполняется… попробуйте снова через несколько секунд."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "Сохранено."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "Что я слышу?"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "Определитель звуков"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "Живая карта молний"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "Откуда эти щёлчки?"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "Турция"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "Европа"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "Карту не удалось встроить сюда."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "Открыть карту в новой вкладке"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"Каждый <b>сферик</b>, который вы слышите, — радиопульс одного разряда молнии "
+"на этой карте. Близкие грозы приходят резкими щёлчками, дальние — мягким "
+"рокотом. Тихая карта означает тихий эфир — лучше всего слушать, когда в "
+"регионе есть активность. Данные: <a href=\"https://www.blitzortung.org/\" "
+"target=\"_blank\" rel=\"noopener\">Blitzortung.org</a>, сеть добровольцев."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "Далёкие передатчики"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "Что поймала эта станция"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"Эти передатчики стоят за тысячи километров и намного выше человеческого "
+"слуха — их не слышно, их <b>измеряют</b>. Таблица ниже показывает, как ручка "
+"швабры и двухтранзисторная схема с батарейным питанием одновременно "
+"принимают российские, французские, британские, немецкие, американские и "
+"турецкие станции: прямое доказательство, что вся цепочка работает."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"Железо: антенна на металлической трубке + опорный зонд 10 см · JFET 2N5457 + "
+"TL072 · батарейное питание · линейный вход ПК"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "Это приёмник, а не передатчик. Антенны остаются в помещении."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "В эфире"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "Нет связи"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "СИМУЛЯЦИЯ"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "Статус"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "Частота"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "Станция"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "ОБНАРУЖЕНА"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "слабый след"
+
+#. UI string “none”
+msgid "none"
+msgstr "не видна"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "Сканирований пока не было"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "станций обнаружено"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "стран"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "самая дальняя"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "Последнее сканирование: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "слушателей"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "ПЕРЕГРУЗКА"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "Язык"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "Переключить светлую / тёмную тему"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "Светлая тема"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "Тёмная тема"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "Сферик"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "Короткий щёлчок / треск"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"Радиопульс одиночного разряда молнии, часто за тысячи километров от вас. "
+"Самый частый природный сигнал; на водопаде — тонкая вертикальная линия."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "Твик"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "Металлический чирп"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"Сферик, отразившийся в волноводе Земля–ионосфера. Низкие частоты приходят с "
+"запозданием и дают ему хвост — «крючок J» около 1,7 кГц. Только ночью."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "Свист"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "Длинный нисходящий свист"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"Энергия молнии, прошедшая вдоль силовых линий магнитного поля через "
+"магнитосферу и вернувшаяся обратно. Длится секунды, скользит сверху вниз. "
+"Редкость."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "Рассветный хор"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "Как птичье пение"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"Хор, который создают электроны в магнитосфере; громче всего на рассвете и в "
+"высоких широтах."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "Сетевой гул"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "Густое непрерывное жужжание"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Гц и её гармоники — не природное, это просто проводка дома. Подавляется "
+"на канале «Обработанный», слышно на «Исходном»."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "Импульсные помехи"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "Резкие постоянные тоны"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"Зарядки телефонов, LED-драйверы, мониторы. Неподвижные горизонтальные линии "
+"на водопаде. Опорный зонд запоминает их и вычитает."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "Навигация RSDN-20"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "Навигация RSDN-20"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "Навигация RSDN-20"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Военно-морская станция Анторн"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Военно-морская станция Таволара"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Военно-морская станция Росне"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Военно-морская станция Раудерфен"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "Катлер, Мэн"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Бафа — турецкий передатчик"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Гриндавик"

@@ -1,0 +1,395 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: 日本語 <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "トルコ・アンカラからの天然無線ライブ配信"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "クリーン"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "ロウ（生）"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "音量"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "アダプティブキャンセル作動中 — 共通の妨害を除去済み"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "アンテナの生信号 — 処理は一切なし"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "適応キャンセル"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "帯域フィルタ"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "基準整合"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "稼働時間"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "スペクトル"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "ライブスペクトル"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "ウォーターフォール"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "時間 · 周波数ウォーターフォール"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "イベント"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "すべて"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "フリーズ"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "再開"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "イベント/分"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "J探し"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "J探し ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "▶ を押すとウォーターフォールが始まります"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"<b>イベント</b>モードは安定したノイズフロアを学習して差し引き、本物のインパルスだけを残します。スフェリックは一本の縦線として現れます。<b>J探し</b>ボタンを押すと解析ウィンドウが短くなりスクロールが速くなります。トゥイークは50–100 "
+"ms続くので、この設定でこそ尾が横に広がり、1.7 kHz 付近に <b>J</b> 字フックが姿を現します。トゥイークは夜だけ発生します。"
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "さかのぼり録音"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "直近60秒をキャプチャ"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "音声をダウンロード"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "ウォーターフォールをダウンロード"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr "ストリームの再生中は、直近60秒が常時バッファに溜まっています。何か面白い音が聞こえたら、そのタイミングでボタンを押すだけです。"
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "バッファはまだ充填中…数秒待ってからもう一度お試しください。"
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "保存しました。"
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "何が聞こえる？"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "音のフィールドガイド"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "ライブ落雷マップ"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "このパチパチはどこから？"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "トルコ"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "ヨーロッパ"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "この場に地図を埋め込めませんでした。"
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "新しいタブで地図を開く"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"聞こえる<b>スフェリック</b>の一つ一つが、この地図上のどこかで起きた1回の雷放電の電波パルスです。近い雷雨は鋭いクリック、遠い雷雨は柔らかなごう音として届きます。地図が静かなら帯域も静か "
+"— この地域で活動があるときが一番聞き応えがあります。データ：<a href=\"https://www.blitzortung.org/\" "
+"target=\"_blank\" rel=\"noopener\">Blitzortung.org</a> ボランティアネットワーク。"
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "遠くの送信局"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "この局が受信した電波"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"これらの送信局は数千キロの彼方にあり、人間の耳をはるかに超える周波数 — "
+"聞こえるものではなく、<b>測定</b>するものです。次の表は、モップの柄1本と電池駆動の2トランジスタ回路が、ロシア・フランス・イギリス・ドイツ・アメリカ・トルコの局を一度に検出したさまを示しています。系全体が正しく動いている直接的な証拠です。"
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr "ハードウェア：金属ポールアンテナ + 10 cm 基準プローブ · 2N5457 JFET + TL072 · 電池駆動 · PCライン入力"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "これは受信機であって送信機ではありません。アンテナは屋内に置きます。"
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "配信中"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "接続なし"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "シミュレーション"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "状態"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "周波数"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "局"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "検出"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "微弱な痕跡"
+
+#. UI string “none”
+msgid "none"
+msgstr "未検出"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "まだスキャンの記録はありません"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "局を検出"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "か国"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "最遠"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "最終スキャン：{d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "人が視聴中"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "クリッピング"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "言語"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "ライト / ダークテーマの切り替え"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "ライトテーマ"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "ダークテーマ"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "スフェリック"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "短いクリック / パチパチ"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr "1回の雷放電が放つ電波パルス。発生源は数千 km 離れていることも。最もよく聞かれる自然の信号で、ウォーターフォールでは細い縦線になります。"
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "トゥイーク"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "金属的なチャープ"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"地球–電離層の導波管の中で跳ね返りを繰り返したスフェリック。低い周波数ほど遅れて届くため尻尾ができ、1.7 kHz "
+"付近に「J」字フックが現れます。夜だけ。"
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "ウィスラー"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "長く下降していく笛"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr "雷のエネルギーが磁力線に沿って磁気圏を旅して戻ってきたもの。数秒かけて高い音から低い音へすべり落ちます。まれ。"
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "夜明けのコーラス"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "小鳥のさえずりのよう"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr "磁気圏の電子が織りなす合唱。夜明け前後と高緯度ほどよく聞こえます。"
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "商用電源ハム"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "太く続くブーン"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr "50 Hz とその高調波 — 自然音ではなく、建物の配線の音。クリーンチャネルでは抑えられ、ロウに切り替えると聞こえます。"
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "スイッチングノイズ"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "耳障りな定常トーン"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr "スマホ充電器、LED ドライバ、モニター。ウォーターフォールでは動かない横線として現れます。基準プローブがこれらを学習して差し引いてくれます。"
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "RSDN-20 航法"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "RSDN-20 航法"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "RSDN-20 航法"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Anthorn 海軍送信所"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Tavolara 海軍送信所"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Rosnay 海軍送信所"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Rhauderfehn 海軍送信所"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "カトラー（米メイン州）"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — トルコの送信局"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

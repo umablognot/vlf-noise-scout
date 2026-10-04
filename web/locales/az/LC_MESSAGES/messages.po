@@ -1,0 +1,419 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: Azərbaycanca <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "Türkiyə, Ankaradan canlı təbii radio yayımı"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "Təmiz"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "Xam"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "Səs"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "Adaptiv ləğv açıqdır — ümumi parazit çıxarıldı"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "Xam anten siqnalı — heç bir emal tətbiq edilməyib"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "Adaptiv ləğv"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "Zolaq filtri"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "Referans uyğunluğu"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "İşləmə müddəti"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "Spektr"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "Canlı spektr"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "Şəlalə"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "Zaman · tezlik şəlaləsi"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "Hadisələr"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "Hamısı"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "Dondur"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "Axıt"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "hadisə/dəq"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "J ovu"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "J ovu ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "Şəlaləni başlatmaq üçün ▶ düyməsinə basın"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"<b>Hadisələr</b> rejimi sabit səs-küy fonunu öyrənib çıxarır; ekranda yalnız "
+"əsl impulslar qalır. Sferik şaquli xətt şəklində görünür. <b>J ovu</b> "
+"düyməsi analiz pəncərəsini qısaldıb axını sürətləndirir: tvik 50–100 ms "
+"davam etdiyi üçün yalnız bu rejimdə onun quyruğu üfüqi istiqamətdə yayılır "
+"və ~1.7 kHz yaxınlığında <b>J</b> qıvrımı görünür. Tviklər yalnız gecə "
+"yaranır."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "Geriye dönük səsyazma"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "Son 60 saniyəni yaxala"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "Səsi yüklə"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "Şəlaləni yüklə"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"Yayım çalarkən son 60 saniyə fasiləsiz buferləşdirilir — maraqlı bir şey "
+"eşitdikdən sonra düyməyə basın."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "Bufer hələ dolur… bir neçə saniyədən sonra yenidən cəhd edin."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "Yadda saxlanıldı."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "Nə eşidirəm?"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "Səsləri tanıma bələdçisi"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "Canlı ildırım xəritəsi"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "Bu çırtıltılar haradan gəlir?"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "Türkiyə"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "Avropa"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "Xəritə burada yerləşdirilə bilmədi."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "Xəritəni yeni vərəqdə aç"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"Eşitdiyiniz hər <b>sferik</b> bu xəritədəki bir ildırım boşalmasının radio "
+"impulsudur. Yaxın fırtınalar kəskin çırtıltı, uzaqdakılar yumşaq gurultu "
+"kimi gəlir. Xəritə sakitdisə zolaq da sakitdir — ən yaxşı dinləmə bölgədə "
+"fəaliyyət olduqda mümkündür. Məlumat: <a href=\"https://www.blitzortung.org/\" "
+"target=\"_blank\" rel=\"noopener\">Blitzortung.org</a> könüllü şəbəkəsi."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "Uzaq vericilər"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "Bu stansiyanın tutduqları"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"Bu vericilər minlərlə kilometr uzaqda və insan qulağının eşitdiyindən xeyli "
+"yüksək tezlikdədir — onlar eşidilmir, <b>ölçülür</b>. Aşağıdakı cədvəl "
+"süpürgə sapı və batareya ilə işləyən iki tranzistorlu dövrənin Rusiya, "
+"Fransa, İngiltərə, Almaniya, ABŞ və Türkiyə stansiyalarını eyni anda "
+"tutduğunu göstərir: zəncirin işlədiyinin birbaşa sübutu."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"Təchizat: metal dirək anten + 10 cm referans zond · 2N5457 JFET + TL072 · "
+"batareya qidalanması · PC xətt girişi"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "Bu qəbizedicidir, verici deyil. Antenlər bina daxilində qalır."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "Efirdə"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "Bağlantı yoxdur"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "SİMULYASİYA"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "Vəziyyət"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "Tezlik"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "Stansiya"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "TAPILDI"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "zəif iz"
+
+#. UI string “none”
+msgid "none"
+msgstr "görünməyib"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "Hələ skan aparılmayıb"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "stansiya aşkarlandı"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "ölkə"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "ən uzaq"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "Son skan: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "dinləyici"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "KLİPPİNQ"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "Dil"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "Açıq / tünd temaya keçid"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "Açıq tema"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "Tünd tema"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "Sferik"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "Qısa klik / çırtıltı"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"Tək bir ildırım boşalmasının radio impulsu; çox vaxt minlərlə km uzaqdan. Ən "
+"çox rast gəlinən təbii siqnal; şəlalədə nazik şaquli xətt."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "Tvik"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "Metalik qısa fit"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"Yer–ionosfer dalğaötürücüsünün içində əks olunan sferik. Aşağı tezliklər "
+"gecikmiş gəldiyi üçün səsin quyruğu yaranır — ~1.7 kHz yaxınlığında \"J\" "
+"qıvrımı. Yalnız gecə."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "Fısıltı"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "Aşağı enən uzun fit"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"İldırım enerjisi maqnit sahə xətləri boyunca maqnitosferdən keçib geri "
+"qayıdıb. Saniyələrlə davam edir, yuxarıdan aşağıya sürüşür. Nadirdir."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "Şəfəq xoru"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "Quş cığıltısı kimi"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"Maqnitosferdə elektronların yaratdığı xor; şəfəq vaxtı və yüksək enliklərdə "
+"daha qüvvətlidir."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "Şəbəkə uğultusu"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "Qalın fasiləsiz vızıltı"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Hz və onun harmonikləri — təbii deyil, binanın naqilləridir. Təmiz "
+"kanalda basdırılır, Xam kanalda eşidilir."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "Anahtarlanma səs-küyü"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "Kəskin sabit tonlar"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"Telefon şarj cihazları, LED sürücülər, monitorlar. Şəlalədə yerində duran "
+"üfüqi xətlər. Referans zond bunları öyrənib çıxarır."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "RSDN-20 naviqasiyası"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "RSDN-20 naviqasiyası"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "RSDN-20 naviqasiyası"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Anthorn hərbi dəniz stansiyası"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Tavolara hərbi dəniz stansiyası"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Rosnay hərbi dəniz stansiyası"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Rhauderfehn hərbi dəniz stansiyası"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "Cutler, Meyn"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — Türkiyə vericisi"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

@@ -1,0 +1,416 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: Zazakî <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: zza\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "Radyoya xowezaya zindı ra Ankara, Tırkiya"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "Pak"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "Xam"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "Veng"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "Wedarnayışê otomatiki akeryo — parazita miyanê wedariya"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "Sinyalo xamê antene — işlem nêbiyo"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "Wedarnayışê otomatiki"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "Filtreya bandi"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "Gırêdayışê referansi"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "Wextê gure"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "Spektrum"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "Spektrumo zindı"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "Şelale"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "Şelaleya demi · frekansi"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "Waey"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "Pêro"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "Vınder"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "Dewam bıkere"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "waey/deqiqe"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "Nêçirê J"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "Nêçirê J ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "Sıftey şelale rê ▶ bıtıknê"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"Moda <b>Waey</b> de hardê vengio sabit museno û wedarıno; tenê impulsê "
+"raştıkên manenê; sferik xetê tici yo. Dügma <b>Nêçirê J</b> pencereya "
+"analizi kılmekena û cêrayışi hızlandena: çunkı twik 50–100 ms maneno, tenê "
+"na eyar de dumanka ra tiya ra yena pêra û qolê <b>J</b> nezdiyê 1.7 kHz de "
+"veciyeno. Twiki tenê şew de benê."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "Qeydê peyi"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "60 saniyey peyêni bıgure"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "Vengi war gure"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "Şelale war gure"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"Waxto ke weşaney dewam kena, 60 saniyey peyêni pêro hafızay kenê — dıma ke "
+"çiyêk hewl goş kerd, dügma tıknê."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "Hafıza hondı tijiyena… çend saniyan dıma rey bıde."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "Qeyd bi."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "Ez çi goş kena?"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "Rayberê vengun"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "Harikeya tıruşke ya zindı"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "Nê qırışi koti ra yenê?"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "Tırkiya"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "Ewropa"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "Harikey ita nêvineya."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "Harikey yew tabo newi de bıakerê"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"Her <b>sferik</b>o ke ti goş kena, pulsê radyoyê tıruşka yewine yo ke ena "
+"harikey dero. Vartiyê nezdiyi be qırışo tuj yenê, ê duriyê ki be vengo nermo "
+"yenê. Harikeya bêveng bande bêveng a — goşkerdişo tewr weş waxto ke herêm de "
+"hereket esto beno. Melumat: <a href=\"https://www.blitzortung.org/\" "
+"target=\"_blank\" rel=\"noopener\">Blitzortung.org</a> tora canfıdan."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "Transmiterê duriyi"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "Eno istasyon çi gureto"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"Nê transmiterê hezaran kilometrey durî de ê û goşê insani ra zaf berzî yo — "
+"nêy goş ra nêresenê, <b>pımniyenê</b>. Tabloya cerênde dêstıkê mapı û pilayê "
+"dı transistoru, istasyonunê Rusya, Fransa, İngıltere, Almanya, Amerika û "
+"Tırkiya rey de yeno guretış: raştkerdışo neto ke girê şuxuliyeno."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"Amur: antena metalına + proba referansi ya 10 cm · 2N5457 JFET + TL072 · "
+"pilayra şuxuliyeno · girişê xeta PC"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "Eno wergiro, transmiter nîyo. Antenê xaney mıyan de manenê."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "Weşaney dero"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "Gırey çino"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "SİMÜLASYON"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "Weziyet"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "Frekans"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "İstasyon"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "DÎYA"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "ızeka qıckeke"
+
+#. UI string “none”
+msgid "none"
+msgstr "Nêdîya"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "Hondı tarama nêbiyo"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "istasyonê dıyayê"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "dewleti"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "tewr duri"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "Tarama peyêne: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "goşkeroği"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "BIRNA"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "Zıwan"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "Vurnayışê temaya ronake / tariye"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "Temaya ronake"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "Temaya tariye"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "Sferik"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "Qırışo kılmek / qırışqış"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"Pulsê tıruşka yewine yo, zaf waxt hezaran km duri ra yenê. Sinyalo xowezayo "
+"tewr zaf; ser şelale de xeto tinıko tici yo."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "Twik"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "Vengo metalo qıckek"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"Sferiko ke mıyanê rêbera pêlunê Hard–iyonosferi de pırrıyayo. Frekansê nızmî "
+"dereng yenê, dumanka cıra manena — qola \"J\" nezdiyê 1.7 kHz. Tenê şew de."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "Wistler"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "Fıteyo dirêj ke war yeno"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"Enerjiya tıruşke ke ser xetunê qada manyetiki ra, mıyanê manyetosferi ra "
+"dergiya û ameya. Çend saniye dewam kena, cor ra cêr kay kena. Kem ya."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "Koroo şevekerdeyi"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "Weq vengê çükan"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"Koroo ke enerjiya elektronunê mıyanê manyetosferi ra veciyeno; nezdiyê "
+"şevekerdişi û herunê corên de qüwetro."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "Vıza şebeke"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "Vızo stundo ke nêvındeno"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Hz û harmonikunê xo — xowezay nîyo, tenê teliyê xaneyo. Kanala Pak de "
+"wedarıno; kanala Xam de goşiyeno."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "Parazitê vurnayışi"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "Tonê tujê sabit"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"Şarjkerunê telefonun, ajokerunê LED, monitor. Ser şelale de xetê yatayê "
+"nêharekênê. Proba referansi ninan museno û wedarıno."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "Navigasyonê RSDN-20"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "Navigasyonê RSDN-20"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "Navigasyonê RSDN-20"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "İstasyona deryaya Anthorn"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "İstasyona deryaya Tavolara"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "İstasyona deryaya Rosnay"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "İstasyona deryaya Rhauderfehn"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "Cutler, Maine"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — transmiterê Tırkiya"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

@@ -1,0 +1,386 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: English <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr ""
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr ""
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr ""
+
+#. UI string “volume”
+msgid "volume"
+msgstr ""
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr ""
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr ""
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr ""
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr ""
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr ""
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr ""
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr ""
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr ""
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr ""
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr ""
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr ""
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr ""
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr ""
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr ""
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr ""
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr ""
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr ""
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr ""
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr ""
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr ""
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr ""
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr ""
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr ""
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr ""
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr ""
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr ""
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr ""
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr ""
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr ""
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr ""
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr ""
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr ""
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr ""
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr ""
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr ""
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr ""
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr ""
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr ""
+
+#. UI string “thState”
+msgid "thState"
+msgstr ""
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr ""
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr ""
+
+#. UI string “seen”
+msgid "seen"
+msgstr ""
+
+#. UI string “trace”
+msgid "trace"
+msgstr ""
+
+#. UI string “none”
+msgid "none"
+msgstr ""
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr ""
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr ""
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr ""
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr ""
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr ""
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr ""
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr ""
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr ""
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr ""
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr ""
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr ""
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr ""
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr ""
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr ""
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr ""
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr ""
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr ""
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr ""
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr ""
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr ""
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr ""
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr ""
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr ""
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr ""
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr ""
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr ""
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr ""
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr ""
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr ""
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr ""
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr ""
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr ""
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr ""
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr ""

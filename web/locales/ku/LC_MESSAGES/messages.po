@@ -1,0 +1,418 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: Kurmancî <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "Radyoya xwezayî ya zindî ji Enqerê, Tirkiyê"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "Pak"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "Xav"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "Deng"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "Rakirina adaptekî çalak e — parazîta hevpar hatiye jêbirin"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "Sinyala xav a antenê — bêyî tu prosesekê"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "Rakirina adaptekî"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "Parzûna bendê"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "Hevgirtina referansê"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "Dema xebatê"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "Spektrum"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "Spektruma zindî"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "Şelal"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "Şelalê dem · frekansê"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "Bûyer"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "Hemû"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "Cemidîne"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "Bidomîne"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "bûyer/xulek"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "Nêçîra J"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "Nêçîra J ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "Bo destpêkirina şelalê ▶ bitikîne"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"Di moda <b>Bûyer</b> de qata dengê ya sabît tê fêrbûn û ji sinyalê tê "
+"rakirin; tenê teqînên rastîn dimînin; sferîk xêzeke vertîkal e. Bişkoka "
+"<b>Nêçîra J</b> paceya analîzê kurt dike û bileztir dike: ji ber ku twîk "
+"50–100 ms didome, tenê bi vê mîhengê dûvila wî ber bi aliyê horizontî belav "
+"dibe û qoza <b>J</b> a nêzîkî 1.7 kHz xuya dibe. Twîk tenê bi şev pêk tên."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "Tomarkirina paşverû"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "60 çirkên dawî bigire"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "Dengê dakêşe"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "Şelalê dakêşe"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"Dema weşanê dilîze, 60 çirkên dawî bi domdarî têne berhevkirin — piştî ku "
+"tiştekî balkêş bihîstî, bişkokê bitikîne."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "Bîre hîn tijî dibe… çend çirkeyan paşê dîsa biceribîne."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "Hat tomarkirin."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "Ez çi dibihîsim?"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "Rêbera naskirina deng"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "Nexşeya birûskê ya zindî"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "Ev çitirtî ji ku têne?"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "Tirkiye"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "Ewropa"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "Nexşe li vir venabe."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "Nexşe di tabeke nû de veke"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"Her <b>sferîk</b> ku tu dibihîsî pêla radyoyê ya birûskeke li ser vê nexşeyê "
+"ye. Bahozên nêzîk wek çitirtiyên tûj tên, yên dûr jî wek gurîmên nerm. "
+"Nexşeya bêdeng tê wateya bendeke bêdeng — guhdarî ya herî baş wextê ku li "
+"herêmê çalakî heye pêk tê. Daneyên: <a href=\"https://www.blitzortung.org/\" "
+"target=\"_blank\" rel=\"noopener\">Blitzortung.org</a> tora dilxwazan."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "Veguhêzerên dûr"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "Ev îstasyon çi girtiye"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"Ev veguhêzer bi hezaran kîlometre dûrî ne û pir bilindtir in ji bihîstina "
+"mirovan — nayên bihîstin, <b>têne pîvan</b>. Tabloya jêrîn destikê mapî û "
+"pergaleke duy-transîstorî ya bi bataryayê nîşan dide ku di heman demê de "
+"îstasyonên rûsî, fransî, brîtanî, alman, amerîkî û tirk digire: delîla "
+"rastîn a ku zincîr dixebite."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"Pêkhate: antena stûna metalî + proba referansê ya 10 cm · 2N5457 JFET + "
+"TL072 · bi bataryayê dixebite · têketina xêza PC"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "Ev wergir e, ne veguhêzer e. Anten di hundirê avahiyê de dimînin."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "Di weşanê de"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "Têkilî tune ye"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "SÎMÛLASYON"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "Rewş"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "Frekans"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "Îstasyon"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "DÎT"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "şopeka qels"
+
+#. UI string “none”
+msgid "none"
+msgstr "Nehat dîtin"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "Hîn tu skan nehatiye tomarkirin"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "îstasyonên hatine dîtin"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "welat"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "herî dûr"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "Skana dawî: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "guhdar"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "QUTBÛN"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "Ziman"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "Guherandina temaya ronak / tarî"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "Temaya ronak"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "Temaya tarî"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "Sferîk"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "Qirseka kurt / çitirtî"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"Pêla radyoyê ya birûskeke tenê, pir caran bi hezaran kîlometre dûrtir. "
+"Sinyala xwezayî ya herî gelemperî; li ser şelalê xêzeke vertîkal a tenik e."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "Twîk"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "Qîrîneke metalî"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"Sferîkek e ku hundirê rêberê pêlan a Erd–îyonosferê de lêxistiye. Frekansên "
+"nizm dereng digihîjin û dûvilekê didin wî — qoza \"J\" a nêzîkî 1.7 kHz. Tenê "
+"bi şev."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "Wîstler"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "Fîfîkeke dirêj a ber bi jêr"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"Ênjiya birûskê ku li ser xêzên qada magnetîkî bi rêya magnetosferê geriya û "
+"vegeriya. Çend çirke didome, ji bilind ber bi nizm dikişe. Kêm e."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "Koroya spêdê"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "Wek dengên çûkan"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"Koroyeke ku ji elektronên di magnetosferê de peyda dibe; nêzîkî spêdê û li "
+"xezalên bilindtir xurtir e."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "Vîza şebekê"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "Vîzeke stûr a bêrawestan"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Hz û harmonîkên wî — ne xwezayî ne, tenê têldariya avahiyê ye. Li kanala "
+"Pak tê sipandin; li Xav bihîstî dibe."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "Parazîta qutbarkirinê"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "Tonên sabît ên tûj"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"Şarjkerên telefonan, ajokerên LED, monitor. Li ser şelalê xêzên horizontî "
+"yên bêtevger in. Proba referansê van fêr dibe û wan ji sinyalê radike."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "Navîgasyona RSDN-20"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "Navîgasyona RSDN-20"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "Navîgasyona RSDN-20"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Îstasyona deryayî ya Anthorn"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Îstasyona deryayî ya Tavolara"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Îstasyona deryayî ya Rosnay"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Îstasyona deryayî ya Rhauderfehn"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "Cutler, Maine"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — veguhêzerê Tirkiyê"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

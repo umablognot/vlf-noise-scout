@@ -1,0 +1,394 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: 中文 <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "来自土耳其安卡拉的天然无线电直播"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "净化"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "原始"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "音量"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "自适应对消已开启 — 共同干扰已消除"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "原始天线信号 — 未做任何处理"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "自适应对消"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "频段滤波"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "参考匹配"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "运行时长"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "频谱"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "实时频谱"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "瀑布图"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "时间 · 频率瀑布图"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "事件"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "全部"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "冻结"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "恢复"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "事件/分钟"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "J 搜寻"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "J 搜寻 ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "点击 ▶ 启动瀑布图"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"<b>事件</b>模式会学习并扣除稳定的噪声底，只留下真正的脉冲；天电表现为一条竖直线。<b>J "
+"搜寻</b>按钮会缩短分析窗口、加快滚动速度：由于啾声持续 50–100 毫秒，只有在这个设置下它的尾巴才会横向铺开，在 1.7 kHz 附近显出 "
+"<b>J</b> 形弯钩。啾声只在夜间出现。"
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "回溯录音"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "录下最近 60 秒"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "下载音频"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "下载瀑布图"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr "直播播放期间，最近 60 秒会被持续缓存 — 听到有意思的声音后，按下按钮即可。"
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "缓冲还在填充…请过几秒再试。"
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "已保存。"
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "听见什么？"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "声音野外识别指南"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "实时闪电地图"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "这些咔嗒声从哪里来？"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "土耳其"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "欧洲"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "地图无法嵌入到这里显示。"
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "在新标签页打开地图"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"你听到的每一声<b>天电</b>，都是这张地图上某次闪电放电的无线电脉冲。近处雷暴来的是尖锐咔嗒，远处的则是低沉轰鸣。地图安静就意味着波段安静 — "
+"最佳的收听时机正是该区域有活动的时候。数据来源：<a href=\"https://www.blitzortung.org/\" "
+"target=\"_blank\" rel=\"noopener\">Blitzortung.org</a> 志愿者网络。"
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "远方发射台"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "本站曾收到的电台"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"这些发射台远在数千公里之外，频率也远超人耳可闻范围 — "
+"它们不是用来听的，而是用来<b>测量</b>的。下面的表格里，一根拖把杆加一套电池供电的双晶体管电路，同时接收到了俄罗斯、法国、英国、德国、美国和土耳其的电台：这就是整套链路正常工作的直接证据。"
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr "硬件：金属杆天线 + 10 cm 参考探头 · 2N5457 JFET + TL072 · 电池供电 · 电脑线路输入"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "这是接收机，不是发射机。天线一律放在室内。"
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "直播中"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "无连接"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "模拟信号"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "状态"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "频率"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "电台"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "已检出"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "微弱痕迹"
+
+#. UI string “none”
+msgid "none"
+msgstr "未见"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "尚无扫描记录"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "已检出电台"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "个国家"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "最远"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "上次扫描：{d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "位听众"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "削波"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "语言"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "切换浅色 / 深色主题"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "浅色主题"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "深色主题"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "天电"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "短促的咔嗒 / 爆裂声"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr "单次闪电放电发出的无线电脉冲，往往来自数千公里之外。最常见的天然信号；在瀑布图上是一条纤细的竖直线。"
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "啾声"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "金属般的啁啾"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr "在地球–电离层波导中来回反弹的天电。低频到得晚，于是拖出一条尾巴 — 1.7 kHz 附近的“J”形弯钩。只在夜间出现。"
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "哨声"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "悠长的下滑哨音"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr "闪电能量沿磁力线穿过磁层又折返回来。可持续数秒，音调由高滑向低。较为罕见。"
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "黎明合唱"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "宛如鸟鸣"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr "由磁层中的电子“奏出”的合唱，在黎明前后以及高纬度地区最为明显。"
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "工频哼声"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "粗重的持续嗡声"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr "50 Hz 及其谐波 — 并非天然之声，只是楼房里的电线。净化通道上被抑制，切到原始通道就能听见。"
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "开关噪声"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "刺耳的稳定音调"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr "手机充电器、LED 驱动器、显示器。在瀑布图上是一动不动的水平线。参考探头会学习这些信号并把它们扣除。"
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "RSDN-20 导航"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "RSDN-20 导航"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "RSDN-20 导航"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Anthorn 海军电台"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Tavolara 海军电台"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Rosnay 海军电台"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Rhauderfehn 海军电台"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "美国缅因州卡特勒"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — 土耳其发射台"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

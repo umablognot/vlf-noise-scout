@@ -1,0 +1,423 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: Español <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "Radio natural en directo desde Ankara, Türkiye"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "Limpia"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "Bruta"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "Volumen"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "Cancelación adaptativa activa — interferencia común eliminada"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "Señal bruta de la antena — sin ningún procesamiento"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "Cancelación adaptativa"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "Filtro de banda"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "Coincidencia de referencia"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "Tiempo activo"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "Espectro"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "Espectro en vivo"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "Cascada"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "Cascada tiempo · frecuencia"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "Eventos"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "Todos"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "Congelar"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "Reanudar"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "eventos/min"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "Caza del J"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "Caza del J ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "Pulsa ▶ para iniciar la cascada"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"El modo <b>Eventos</b> aprende y resta el piso de ruido estable, dejando "
+"solo los impulsos genuinos; un esférico es una línea vertical. El botón "
+"<b>Caza del J</b> acorta la ventana de análisis y acelera el desplazamiento: "
+"como un tweek dura 50–100 ms, solo con este ajuste su cola se extiende en "
+"horizontal y revela el gancho en <b>J</b> cerca de 1.7 kHz. Los tweek solo "
+"aparecen de noche."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "Grabación retrospectiva"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "Últimos 60 segundos"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "Descargar audio"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "Descargar cascada"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"Mientras se reproduce la transmisión, los últimos 60 segundos se guardan en "
+"un búfer continuo — pulsa el botón justo después de oír algo interesante."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "El búfer aún se está llenando… inténtalo de nuevo en unos segundos."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "Guardado."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "¿Qué estoy oyendo?"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "Guía de los sonidos"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "Rayos en vivo"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "¿De dónde vienen estos chasquidos?"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "Turquía"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "Europa"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "El mapa no pudo incrustarse aquí."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "Abrir el mapa en una pestaña nueva"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"Cada <b>esférico</b> que oyes es el pulso de radio de una descarga eléctrica "
+"en este mapa. Las tormentas cercanas llegan como chasquidos secos; las "
+"lejanas, como retumbos suaves. Un mapa en silencio significa una banda "
+"silenciosa — la mejor escucha se da cuando hay actividad en la región. "
+"Datos: red de voluntarios <a href=\"https://www.blitzortung.org/\" "
+"target=\"_blank\" rel=\"noopener\">Blitzortung.org</a>."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "Transmisores lejanos"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "Captado por esta estación"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"Estos transmisores están a miles de kilómetros y muy por encima del oído "
+"humano — no se escuchan, se <b>miden</b>. La tabla siguiente muestra un palo "
+"de fregona y un circuito de dos transistores con batería detectando a la vez "
+"estaciones rusas, francesas, británicas, alemanas, estadounidenses y turcas: "
+"prueba directa de que la cadena funciona."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"Hardware: antena de mástil metálico + sonda de referencia de 10 cm · JFET "
+"2N5457 + TL072 · alimentado por batería · entrada de línea del PC"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr ""
+"Esto es un receptor, no un transmisor. Las antenas permanecen dentro de "
+"casa."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "En el aire"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "Sin conexión"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "SIMULACIÓN"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "Estado"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "Frecuencia"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "Estación"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "DETECTADA"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "traza débil"
+
+#. UI string “none”
+msgid "none"
+msgstr "no vista"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "Aún no hay ningún barrido registrado"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "estaciones detectadas"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "países"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "la más lejana"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "Último barrido: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "oyentes"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "SATURACIÓN"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "Idioma"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "Alternar tema claro / oscuro"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "Tema claro"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "Tema oscuro"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "Esférico"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "Chasquido corto / crepitar"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"El pulso de radio de una sola descarga eléctrica, a menudo a miles de km. La "
+"señal natural más común; una fina línea vertical en la cascada."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "Tweek"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "Chirp metálico"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"Un esférico que rebotó dentro de la guía de ondas Tierra–ionosfera. Las "
+"frecuencias bajas llegan tarde y le dan una cola — el gancho en \"J\" cerca de "
+"1.7 kHz. Solo de noche."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "Silbido"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "Silbido largo descendente"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"Energía de un rayo que viajó por las líneas del campo magnético a través de "
+"la magnetosfera y regresó. Dura segundos, descendiendo de agudo a grave. "
+"Poco frecuente."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "Coro del amanecer"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "Como canto de pájaros"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"Un coro generado por electrones en la magnetosfera, más intenso cerca del "
+"amanecer y en latitudes altas."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "Zumbido de red"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "Zumbido continuo y denso"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Hz y sus armónicos — no es natural, es el cableado del edificio. "
+"Suprimido en el canal Limpia, audible en Bruta."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "Ruido de conmutación"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "Tonos constantes y ásperos"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"Cargadores de móvil, controladores LED, monitores. Líneas horizontales "
+"inmóviles en la cascada. La sonda de referencia los aprende y los resta."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "Navegación RSDN-20"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "Navegación RSDN-20"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "Navegación RSDN-20"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Estación naval de Anthorn"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Estación naval de Tavolara"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Estación naval de Rosnay"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Estación naval de Rhauderfehn"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "Cutler, Maine"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — transmisor turco"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

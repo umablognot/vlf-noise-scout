@@ -1,0 +1,419 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: Maya t'aan <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: yua\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "Radiyo kuxa'anil en vivo ti' Ankara, Turkiya"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "Chi'"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "Chùun"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "K'ajoloch"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "U adaptativo yaan — intereferensya ch'íik"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "Señal antena chùun — ma' meyajta'ab"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "Adaptativo ch'íik"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "Filtro banda"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "K'ajóolt referencia"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "K'iin yaan"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "Espektrum"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "Espektrum kuxa'an"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "Ha'jalab"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "K'iin · frekuensya ha'jalab"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "Yúuchul"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "Tuláakal"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "Páay"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "Súut"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "yúuchul/min"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "J táak"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "J táak ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "Presiona ▶ u k'uchul le ha'jalab"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"<b>Yúuchul</b> modo k'ajóolt yéetel ch'íik le t'u'ux chuk-páatal, k'uch "
+"chéen jach yúuchul; jun sferic jun ko'och ts'éel síijil. Le botón <b>J "
+"táak</b> ko'och u ventana análisis yéetel k'iinam u súut le ha'jalab: tumen "
+"jun tweek yaan 50–100 ms, chéen ti' le modo a u cola pach-páatal ts'éel "
+"yéetel u yilik le <b>J</b> k'uch ti' náach 1.7 kHz. Tweek k'uch chéen ti' "
+"áak'ab."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "Grabación súut páay"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "Chuk le 60 segundos ka'ach"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "Descargar audio"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "Descargar ha'jalab"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"Ti' k'uchul k'ajoloch, le 60 segundos ka'ach chuk-páatal tuláakal k'iin — "
+"presiona le botón beet k'uch jun t'u'ux jach k'ajoloch."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "Le chuk yaan k'uch… súut ti' jun p'éel segundos."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "Ts'íibta'ab."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "Bax t'u'ux beya?"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "Guía ti' le k'ajoloch"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "Mapa kuxa'an uk'ux k'ahk'"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "Tu'ux k'uch le t'u'uxob beya?"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "Turkiya"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "Europa"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "Ma' k'uch le mapa beya."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "Jech le mapa ti' jun pestaña"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"Junp'éelát <b>sferic</b> k'uch ti' a ik' beya, jun yúuchul uk'ux k'ahk' ti' "
+"le mapa. Le ik' náach k'uch yéetel jach ch'íik; le náachil k'uch yéetel "
+"t'u'ux chéen. Jun mapa ma' t'u'ux k'uch jun banda ma' t'u'ux — le jach "
+"k'ajoloch k'uch beet yaan yúuchul ti' le región. Datos: <a "
+"href=\"https://www.blitzortung.org/\" target=\"_blank\" "
+"rel=\"noopener\">Blitzortung.org</a> red voluntariado."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "Transmisor náachilob"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "Bax chuk le estasiyon beya?"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"Le transmisor náachilob yaan miles kilómetro náach, jach náach ti' ik' "
+"máako'ob — ma' k'uch ti' ik', <b>medidoob</b>. Le tabla beya yilik jun k'ab "
+"ts'íich'en yéetel jun circuito ka' transistor yéetel pilas, chuk estasiyon "
+"Rusia, Fransia, Inglaterra, Alemania, Estados Unidos yéetel Turkiya "
+"junp'éelát k'iin: jach prueba ku meyaj le sistema."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"Hardware: antena palo metal + proba referencia 10 cm · 2N5457 JFET + TL072 · "
+"yéetel pilas · entrada línea PC"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "Beya jun receptor, ma' transmisor. Le antena yaan ichil le naj."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "Kuxa'an"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "Ma' k'uch"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "SIMULACIÓN"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "Estado"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "Frekuensya"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "Estasiyon"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "ILTA'AB"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "débil il"
+
+#. UI string “none”
+msgid "none"
+msgstr "Ma' ilta'ab"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "Ma' ts'o'k u táak."
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "estasiyon ilta'ab"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "país"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "u jach náachil"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "Le táak ka'ach: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "oyentes"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "DISTORSIÓN"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "T'àan"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "Súut tema sáasil / éek'"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "Tema sáasil"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "Tema éek'"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "Sferic"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "Ko'och clic / ch'íik ch'íik"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"Jun yúuchul uk'ux k'ahk' k'uch bey radiyo; yaab k'iin miles km náach. Le "
+"jach yaab kuxa'anil señal; jun ko'och ts'éel síijil ti' le ha'jalab."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "Tweek"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "Chirp metáliko"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"Jun sferic p'úuts' ichil lu'um–ionosfera. Le frekuensya ch'úuy k'uch "
+"ts'o'ok, k'uch u cola — le k'uch \"J\" ti' náach 1.7 kHz. Chéen ti' áak'ab."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "Whistler"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "Silbido ko'och emel"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"Le k'ahk' uk'ux k'ahk' súut yéetel le ts'éel magnetismo ichil magnetosfera, "
+"k'uch súut. Yaan segundos, súut ti' p'ich ti' ch'úuy. Jach raro."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "Coro sáask'in"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "Bey t'u'ux ch'íich'"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"Jun coro k'uch tumen electronob ichil magnetosfera; jach k'ahk' ti' sáask'in "
+"yéetel ti' jach náachil latitud."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "Hum corriente"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "Zumbido jach chuk-páatal"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Hz yéetel u armonikoob — ma' kuxa'anil, tumen u elektri' le naj. Ts'o'k "
+"ch'íik ti' le kanal Chi'; k'uch ti' le kanal Chùun."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "Ruido interruptor"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "Tonos duros chuk-páatal"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"Cargador teléfono, driver LED, monitor. Ts'éel pach-páatal ma' súut ti' le "
+"ha'jalab. Le proba referencia k'ajóolt yéetel ch'íik."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "RSDN-20 navegación"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "RSDN-20 navegación"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "RSDN-20 navegación"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Estasiyon naval Anthorn"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Estasiyon naval Tavolara"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Estasiyon naval Rosnay"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Estasiyon naval Rhauderfehn"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "Cutler, Maine"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — transmisor Turkiya"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

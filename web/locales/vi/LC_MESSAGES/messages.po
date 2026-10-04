@@ -1,0 +1,419 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: Tiếng Việt <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "Radio tự nhiên trực tiếp từ Ankara, Thổ Nhĩ Kỳ"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "Đã lọc"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "Gốc"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "Âm lượng"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "Đang bật khử thích nghi — nhiễu chung đã được loại bỏ"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "Tín hiệu gốc từ ăng-ten — chưa qua xử lý nào"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "Khử thích nghi"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "Lọc dải tần"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "Khớp tham chiếu"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "Thời gian hoạt động"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "Phổ"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "Phổ trực tiếp"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "Thác phổ"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "Thác phổ thời gian · tần số"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "Sự kiện"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "Tất cả"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "Tạm dừng"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "Tiếp tục"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "sự kiện/phút"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "Săn chữ J"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "Săn chữ J ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "Nhấn ▶ để bắt đầu thác phổ"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"Ở chế độ <b>Sự kiện</b>, sàn nhiễu ổn định được học rồi trừ đi, chỉ còn lại "
+"các xung thật; xung sét hiện thành một vạch dọc. Nút <b>Săn chữ J</b> rút "
+"ngắn cửa sổ phân tích và cuộn nhanh hơn: vì tweek kéo dài 50–100 ms, chỉ ở "
+"chế độ này đuôi của nó mới trải ngang ra và lộ cái móc <b>J</b> gần 1.7 kHz. "
+"Tweek chỉ xuất hiện về đêm."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "Ghi âm hồi tố"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "Ghi lại 60 giây vừa qua"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "Tải xuống âm thanh"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "Tải xuống thác phổ"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"Trong lúc phát trực tiếp, 60 giây gần nhất luôn được ghi vào bộ đệm — nghe "
+"thấy gì hay ho thì bấm nút ngay."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "Bộ đệm còn đang nạp… vui lòng thử lại sau vài giây."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "Đã lưu."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "Tôi đang nghe gì?"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "Cẩm nang nhận biết âm thanh"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "Bản đồ sét trực tiếp"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "Những tiếng tách này từ đâu đến?"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "Thổ Nhĩ Kỳ"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "Châu Âu"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "Không thể nhúng bản đồ vào đây."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "Mở bản đồ trong tab mới"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"Mỗi <b>xung sét</b> bạn nghe thấy chính là xung radio của một lần sét phóng "
+"điện trên bản đồ này. Giông gần về như tiếng tách sắc, giông xa thì trầm như "
+"tiếng gầm ì. Bản đồ im lặng nghĩa là băng tần cũng im lặng — nghe hay nhất "
+"là lúc khu vực đang có hoạt động. Dữ liệu: mạng lưới tình nguyện viên <a "
+"href=\"https://www.blitzortung.org/\" target=\"_blank\" "
+"rel=\"noopener\">Blitzortung.org</a>."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "Đài phát xa"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "Trạm này đã bắt được gì"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"Những đài phát này cách hàng nghìn kilômét, tần số cao hơn hẳn thính giác "
+"con người — người ta không nghe được chúng, mà <b>đo</b> được chúng. Bảng "
+"dưới đây cho thấy một cán cây lau nhà và một mạch hai transistor chạy pin đã "
+"bắt cùng lúc các đài Nga, Pháp, Anh, Đức, Mỹ và Thổ Nhĩ Kỳ: bằng chứng trực "
+"tiếp rằng cả chuỗi thiết bị hoạt động tốt."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"Phần cứng: ăng-ten que kim loại + đầu dò tham chiếu 10 cm · 2N5457 JFET + "
+"TL072 · chạy pin · ngõ line máy tính"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "Đây là máy thu chứ không phải máy phát. Ăng-ten luôn đặt trong nhà."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "Đang phát"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "Mất kết nối"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "MÔ PHỎNG"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "Trạng thái"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "Tần số"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "Đài"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "PHÁT HIỆN"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "dấu vết yếu"
+
+#. UI string “none”
+msgid "none"
+msgstr "không thấy"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "Chưa có lần quét nào"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "đài đã phát hiện"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "quốc gia"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "xa nhất"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "Lần quét gần nhất: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "người nghe"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "VỠ ÂM"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "Ngôn ngữ"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "Chuyển giao diện sáng / tối"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "Giao diện sáng"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "Giao diện tối"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "Xung sét"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "Tiếng tách ngắn / lục cục"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"Xung radio của một lần sét phóng điện, thường đến từ cách đó hàng nghìn km. "
+"Tín hiệu tự nhiên phổ biến nhất; trên thác phổ là một vạch dọc mảnh."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "Tweek"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "Tiếng rít kim loại"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"Xung sét bị bật lại nhiều lần trong ống dẫn sóng Trái Đất – tầng điện ly. "
+"Tần số thấp đến muộn hơn nên nó có cái đuôi — cái móc chữ “J” gần 1.7 kHz. "
+"Chỉ có về đêm."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "Tiếng huýt"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "Tiếng huýt dài rơi xuống"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"Năng lượng sét đi dọc theo đường sức từ xuyên qua quyển từ rồi quay về. Kéo "
+"dài nhiều giây, trượt từ cao xuống thấp. Hiếm."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "Hợp xướng rạng đông"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "Như chim hót"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"Bản hợp xướng do các electron trong quyển từ tạo ra, rõ nhất vào lúc gần "
+"rạng đông và ở vĩ độ cao."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "Tiếng ù điện lưới"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "Tiếng vo vo dày, liên tục"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Hz và các hài âm — không phải tự nhiên, chỉ là dây điện trong nhà. Bị "
+"triệt tiêu trên kênh Đã lọc; chuyển sang kênh Gốc là nghe thấy."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "Nhiễu chuyển mạch"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "Tông đều và chói tai"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"Sạc điện thoại, mạch điều khiển LED, màn hình. Trên thác phổ là những vạch "
+"ngang đứng yên một chỗ. Đầu dò tham chiếu sẽ học chúng rồi trừ đi."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "Định vị RSDN-20"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "Định vị RSDN-20"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "Định vị RSDN-20"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "Đài hải quân Anthorn"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "Đài hải quân Tavolara"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "Đài hải quân Rosnay"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "Đài hải quân Rhauderfehn"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "Cutler, Maine"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — đài phát của Thổ Nhĩ Kỳ"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"

@@ -1,0 +1,418 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VLF Noise Scout 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/vlf-noise-scout/issues\n"
+"POT-Creation-Date: 2026-10-04 12:00+0000\n"
+"PO-Revision-Date: 2026-10-04 12:00+0000\n"
+"Last-Translator: VLF Noise Scout contributors\n"
+"Language-Team: فارسی <https://github.com/altunsumerve/vlf-noise-scout>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: compile_translations.py\n"
+
+#. UI string “tagline”
+msgid "tagline"
+msgstr "رادیوی طبیعی زنده از آنکارا، ترکیه"
+
+#. UI string “chanClean”
+msgid "chanClean"
+msgstr "پالایش‌شده"
+
+#. UI string “chanRaw”
+msgid "chanRaw"
+msgstr "خام"
+
+#. UI string “volume”
+msgid "volume"
+msgstr "بلندی صدا"
+
+#. UI string “hintClean”
+msgid "hintClean"
+msgstr "حذف تطبیقی فعال است — نویز مشترک برداشته شده"
+
+#. UI string “hintRaw”
+msgid "hintRaw"
+msgstr "سیگنال خام آنتن — هیچ پردازشی روی آن انجام نشده"
+
+#. UI string “mAdaptive”
+msgid "mAdaptive"
+msgstr "حذف تطبیقی"
+
+#. UI string “mBand”
+msgid "mBand"
+msgstr "فیلتر باند"
+
+#. UI string “mCoh”
+msgid "mCoh"
+msgstr "تطابق مرجع"
+
+#. UI string “mUp”
+msgid "mUp"
+msgstr "زمان کارکرد"
+
+#. UI string “specKicker”
+msgid "specKicker"
+msgstr "طیف"
+
+#. UI string “specTitle”
+msgid "specTitle"
+msgstr "طیف زنده"
+
+#. UI string “wfKicker”
+msgid "wfKicker"
+msgstr "آبشاری"
+
+#. UI string “wfTitle”
+msgid "wfTitle"
+msgstr "آبشاری زمان · فرکانس"
+
+#. UI string “modeEvent”
+msgid "modeEvent"
+msgstr "رویدادها"
+
+#. UI string “modeAll”
+msgid "modeAll"
+msgstr "همه"
+
+#. UI string “freeze”
+msgid "freeze"
+msgstr "توقف"
+
+#. UI string “unfreeze”
+msgid "unfreeze"
+msgstr "ادامه"
+
+#. UI string “perMin”
+msgid "perMin"
+msgstr "رویداد در دقیقه"
+
+#. UI string “jmode”
+msgid "jmode"
+msgstr "شکار J"
+
+#. UI string “jmodeOn”
+msgid "jmodeOn"
+msgstr "شکار J ✓"
+
+#. UI string “wfStart”
+msgid "wfStart"
+msgstr "برای شروع آبشاری ▶ را بزنید"
+
+#. UI string “wfNote”
+msgid "wfNote"
+msgstr ""
+"در حالت <b>رویداد</b>، کف نویز یکنواخت یاد گرفته و از سیگنال کم می‌شود و فقط "
+"ضربه‌های واقعی می‌مانند؛ اسفریک یک خط عمودی است. دکمه‌ی <b>شکار J</b> "
+"پنجره‌ی تحلیل را کوتاه و اسکرول را تندتر می‌کند: چون توئیک 50–100 میلی‌ثانیه "
+"طول می‌کشد، فقط با این تنظیم دُم آن در امتداد افقی باز می‌شود و قلاب "
+"<b>J</b> نزدیک 1.7 kHz پیدا می‌شود. توئیک فقط در شب رخ می‌دهد."
+
+#. UI string “recKicker”
+msgid "recKicker"
+msgstr "ضبط 60 ثانیه‌ی اخیر"
+
+#. UI string “recTitle”
+msgid "recTitle"
+msgstr "ثبت 60 ثانیه‌ی آخر"
+
+#. UI string “recAudio”
+msgid "recAudio"
+msgstr "دانلود صدا"
+
+#. UI string “recImage”
+msgid "recImage"
+msgstr "دانلود آبشاری"
+
+#. UI string “recNote”
+msgid "recNote"
+msgstr ""
+"وقتی پخش زنده در جریان است، 60 ثانیه‌ی آخر پیوسته در بافر نگه داشته می‌شود — "
+"صدای جالبی شنیدی، همین حالا دکمه را بزن."
+
+#. UI string “recWait”
+msgid "recWait"
+msgstr "بافر هنوز در حال پر شدن است… چند ثانیه دیگر دوباره امتحان کنید."
+
+#. UI string “recDone”
+msgid "recDone"
+msgstr "ذخیره شد."
+
+#. UI string guideKicker
+msgid "guideKicker"
+msgstr "چه چیزی می‌شنوم؟"
+
+#. UI string guideTitle
+msgid "guideTitle"
+msgstr "راهنمای میدانی صداها"
+
+#. UI string “lxKicker”
+msgid "lxKicker"
+msgstr "نقشه‌ی زنده‌ی رعد و برق"
+
+#. UI string “lxTitle”
+msgid "lxTitle"
+msgstr "این تق‌تق‌ها از کجا می‌آیند؟"
+
+#. UI string “lxTR”
+msgid "lxTR"
+msgstr "ترکیه"
+
+#. UI string “lxEU”
+msgid "lxEU"
+msgstr "اروپا"
+
+#. UI string “lxFallback”
+msgid "lxFallback"
+msgstr "نقشه اینجا جاسازی نشد."
+
+#. UI string “lxOpen”
+msgid "lxOpen"
+msgstr "باز کردن نقشه در زبانه‌ی جدید"
+
+#. UI string “lxNote”
+msgid "lxNote"
+msgstr ""
+"هر <b>اسفریک</b> که می‌شنوید، پالس رادیویی یکی از تخلیه‌های رعد و برق روی "
+"همین نقشه است. رعد و برق نزدیک به‌شکل تق‌تق‌های تیز می‌رسد و دورترها با غرشی "
+"نرم. نقشه‌ی ساکت یعنی باند ساکت — بهترین هنگام گوش دادن وقتی است که در منطقه "
+"فعالیت جریان دارد. داده‌ها: شبکه‌ی داوطلبانه‌ی <a "
+"href=\"https://www.blitzortung.org/\" target=\"_blank\" "
+"rel=\"noopener\">Blitzortung.org</a>."
+
+#. UI string “txKicker”
+msgid "txKicker"
+msgstr "فرستنده‌های دور"
+
+#. UI string “txTitle”
+msgid "txTitle"
+msgstr "آنچه این ایستگاه دریافت کرده"
+
+#. UI string “txNote”
+msgid "txNote"
+msgstr ""
+"این فرستنده‌ها هزاران کیلومتر دورترند و فرکانسشان بسیار فراتر از شنوایی "
+"انسان — شنیده نمی‌شوند، <b>اندازه‌گیری</b> می‌شوند. جدول زیر نشان می‌دهد که "
+"یک دسته جارو و یک مدار دو ترانزیستوری باتری‌خور چگونه هم‌زمان ایستگاه‌های "
+"روسیه، فرانسه، انگلستان، آلمان، آمریکا و ترکیه را شکار می‌کند: مدرک مستقیم "
+"بر اینکه کل زنجیره درست کار می‌کند."
+
+#. UI string “footHw”
+msgid "footHw"
+msgstr ""
+"سخت‌افزار: آنتن میله‌ای فلزی + پروب مرجع 10 سانتی‌متری · JFET 2N5457 + TL072 "
+"· تغذیه با باتری · ورودی line رایانه"
+
+#. UI string “footSafety”
+msgid "footSafety"
+msgstr "این یک گیرنده است، نه فرستنده. آنتن‌ها همیشه داخل ساختمان می‌مانند."
+
+#. UI string “stOnline”
+msgid "stOnline"
+msgstr "روی آنتن"
+
+#. UI string “stOffline”
+msgid "stOffline"
+msgstr "بدون اتصال"
+
+#. UI string “stMock”
+msgid "stMock"
+msgstr "شبیه‌سازی"
+
+#. UI string “thState”
+msgid "thState"
+msgstr "وضعیت"
+
+#. UI string “thFreq”
+msgid "thFreq"
+msgstr "فرکانس"
+
+#. UI string “thStation”
+msgid "thStation"
+msgstr "ایستگاه"
+
+#. UI string “seen”
+msgid "seen"
+msgstr "شناسایی شد"
+
+#. UI string “trace”
+msgid "trace"
+msgstr "رد پای کم‌رمق"
+
+#. UI string “none”
+msgid "none"
+msgstr "دیده نشد"
+
+#. UI string “unknown”
+msgid "unknown"
+msgstr "—"
+
+#. UI string “scanNever”
+msgid "scanNever"
+msgstr "هنوز هیچ اسکنی ثبت نشده"
+
+#. UI string “sumDetected”
+msgid "sumDetected"
+msgstr "ایستگاه شناسایی‌شده"
+
+#. UI string “sumCountries”
+msgid "sumCountries"
+msgstr "کشور"
+
+#. UI string “sumFar”
+msgid "sumFar"
+msgstr "دورترین"
+
+#. UI string “scanAt”
+msgid "scanAt"
+msgstr "آخرین اسکن: {d}"
+
+#. UI string “listeners”
+msgid "listeners"
+msgstr "شنونده"
+
+#. UI string “clipping”
+msgid "clipping"
+msgstr "کلیپینگ"
+
+#. UI string “uiLanguage”
+msgid "uiLanguage"
+msgstr "زبان"
+
+#. UI string “themeToggle”
+msgid "themeToggle"
+msgstr "تغییر پوسته‌ی روشن / تاریک"
+
+#. UI string “themeLight”
+msgid "themeLight"
+msgstr "پوسته‌ی روشن"
+
+#. UI string “themeDark”
+msgid "themeDark"
+msgstr "پوسته‌ی تاریک"
+
+#. UI string guide0_t
+msgid "guide0_t"
+msgstr "اسفریک"
+
+#. UI string guide0_s
+msgid "guide0_s"
+msgstr "تق کوتاه / خش‌خش"
+
+#. UI string guide0_d
+msgid "guide0_d"
+msgstr ""
+"پالس رادیویی یک تخلیه‌ی رعد و برق، اغلب از هزاران کیلومتر دورتر. رایج‌ترین "
+"سیگنال طبیعی؛ روی آبشاری یک خط عمودی باریک است."
+
+#. UI string guide1_t
+msgid "guide1_t"
+msgstr "توئیک"
+
+#. UI string guide1_s
+msgid "guide1_s"
+msgstr "جیرجیر فلزی"
+
+#. UI string guide1_d
+msgid "guide1_d"
+msgstr ""
+"اسفریکی که در موج‌بر زمین–یونوسفر جهش کرده است. فرکانس‌های پایین دیرتر "
+"می‌رسند و برایش دُمی می‌سازند — همان قلاب «J» نزدیک 1.7 kHz. فقط شب‌ها."
+
+#. UI string guide2_t
+msgid "guide2_t"
+msgstr "صفیر"
+
+#. UI string guide2_s
+msgid "guide2_s"
+msgstr "صفیری بلند و رو به پایین"
+
+#. UI string guide2_d
+msgid "guide2_d"
+msgstr ""
+"انرژی رعد و برق که در امتداد خطوط میدان مغناطیسی از مغناطکره گذشت و برگشت. "
+"چند ثانیه طول می‌کشد و از بسامد بالا به پایین سُر می‌خورد. کمیاب."
+
+#. UI string guide3_t
+msgid "guide3_t"
+msgstr "کر موب دوشیب"
+
+#. UI string guide3_s
+msgid "guide3_s"
+msgstr "شبیه آواز پرندگان"
+
+#. UI string guide3_d
+msgid "guide3_d"
+msgstr ""
+"همخوانی‌ای که الکترون‌های مغناطکره می‌سازند؛ نزدیک سپیده‌دم و در عرض‌های "
+"جغرافیایی بالا پررنگ‌تر است."
+
+#. UI string guide4_t
+msgid "guide4_t"
+msgstr "وز وز برق شهر"
+
+#. UI string guide4_s
+msgid "guide4_s"
+msgstr "بوم پیوسته‌ی کلفتی"
+
+#. UI string guide4_d
+msgid "guide4_d"
+msgstr ""
+"50 Hz و هارمونیک‌هایش — طبیعی نیست، فقط سیم‌کشی ساختمان است. روی کانال "
+"پالایش‌شده سرکوب می‌شود؛ روی خام شنیده می‌شود."
+
+#. UI string guide5_t
+msgid "guide5_t"
+msgstr "نویز کلیدزنی"
+
+#. UI string guide5_s
+msgid "guide5_s"
+msgstr "تُن‌های یکنواخت و تیز"
+
+#. UI string guide5_d
+msgid "guide5_d"
+msgstr ""
+"شارژر گوشی، درایور LED، مانیتور. روی آبشاری خط‌هایی افقی و بی‌حرکت‌اند. پروب "
+"مرجع همین‌ها را یاد می‌گیرد و از سیگنال کم می‌کند."
+
+#. UI string stationAlphaF1
+msgid "stationAlphaF1"
+msgstr "ناوبری RSDN-20"
+
+#. UI string stationAlphaF2
+msgid "stationAlphaF2"
+msgstr "ناوبری RSDN-20"
+
+#. UI string stationAlphaF3
+msgid "stationAlphaF3"
+msgstr "ناوبری RSDN-20"
+
+#. UI string stationGBZ
+msgid "stationGBZ"
+msgstr "ایستگاه نیروی دریایی Anthorn"
+
+#. UI string stationICV
+msgid "stationICV"
+msgstr "ایستگاه نیروی دریایی Tavolara"
+
+#. UI string stationHWU
+msgid "stationHWU"
+msgstr "ایستگاه نیروی دریایی Rosnay"
+
+#. UI string stationDHO38
+msgid "stationDHO38"
+msgstr "ایستگاه نیروی دریایی Rhauderfehn"
+
+#. UI string stationNAA
+msgid "stationNAA"
+msgstr "کاتلر، مِین"
+
+#. UI string stationTBB
+msgid "stationTBB"
+msgstr "Bafa — فرستنده‌ی ترکیه"
+
+#. UI string stationTFKNRK
+msgid "stationTFKNRK"
+msgstr "Grindavík"
