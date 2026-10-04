@@ -1,115 +1,60 @@
-/* VLF Noise Scout — istasyon arayuzu
-   - TR/EN dil destegi
-   - Ham/Temiz gecisi kesintisiz (iki akis paralel calisir, biri sessize alinir)
-   - Olay modlu waterfall (bin basina ogrenen taban cikarma)
-   - Son 60 saniyenin ses + goruntu kaydi
+/* VLF Noise Scout — istasyon arayüzü
+   - 17 dil desteği (web/locales/<kod>.json — .po/.mo kaynaklarından derlenir)
+   - Açık / karanlık tema (localStorage + sistem tercihi)
+   - Ham/Temiz geçişi kesintisiz (iki akış paralel çalışır, biri sessize alınır)
+   - Olay modlu waterfall (bin başına öğrenen taban çıkarma)
+   - Son 60 saniyenin ses + görüntü kaydı
    - Bilinen VLF vericileri tablosu (/api/transmitters)
 */
+
+"use strict";
 
 const BACKEND = (window.VLF_CONFIG && window.VLF_CONFIG.backendUrl) || "";
 const api = (path) => `${BACKEND}${path}`;
 
-/* ============================ DIL ============================ */
-const I18N = {
-  tr: {
-    tagline: "Ankara'dan canlı doğal radyo yayını",
-    chanClean: "Temiz", chanRaw: "Ham", volume: "Ses",
-    hintClean: "Adaptif iptal açık — ortak parazit çıkarıldı",
-    hintRaw: "Ham anten sinyali — hiçbir işlem uygulanmadı",
-    mAdaptive: "Adaptif iptal", mBand: "Bant filtresi", mCoh: "Referans eşleşmesi", mUp: "Çalışma süresi",
-    specTitle: "Anlık spektrum", wfTitle: "Zaman · frekans şelalesi",
-    modeEvent: "Olay", modeAll: "Tümü",
-    freeze: "Dondur", unfreeze: "Akıt", perMin: "olay/dk",
-    jmode: "J avı", jmodeOn: "J avı ✓",
-    wfNote: "<b>Olay</b> modunda sabit uğultu öğrenilip silinir; ekranda yalnızca gerçek darbeler kalır. Sferic dikey bir çizgidir. <b>J avı</b> düğmesi analiz penceresini kısaltıp akışı hızlandırır: tweek 50–100 ms sürdüğü için ancak bu ayarda kuyruğu yatayda yayılır ve ~1.7 kHz'e kıvrılan <b>J</b> görünür hale gelir. Tweek yalnızca gece oluşur.",
-    recKicker: "GERİYE DÖNÜK KAYIT", recTitle: "Son 60 saniyeyi yakala",
-    recAudio: "Sesi indir", recImage: "Şelaleyi indir",
-    recNote: "Yayın çalarken son 60 saniye sürekli tamponlanır; ilginç bir şey duyduğunuzda butona basmanız yeterli.",
-    recWait: "Tampon doluyor… birkaç saniye sonra tekrar deneyin.",
-    recDone: "Kaydedildi.",
-    guideKicker: "NE DUYUYORUM?", guideTitle: "Sesleri tanıma rehberi",
-    lxKicker: "CANLI YILDIRIM HARİTASI", lxTitle: "Bu çıtırtılar nereden geliyor?",
-    lxTR: "Türkiye", lxEU: "Avrupa",
-    lxFallback: "Harita burada gömülü olarak açılamadı.",
-    lxOpen: "Haritayı yeni sekmede aç",
-    lxNote: "Duyduğunuz her <b>sferic</b>, haritadaki bir yıldırım deşarjının radyo darbesidir. Yakın fırtınalar keskin çıtırtı, uzaktakiler yumuşak patırtı olarak gelir. Harita sessizse bant da sessiz olur — en iyi dinleme, bölgede aktivite varken yapılır. Veri: <a href=\"https://www.blitzortung.org/\" target=\"_blank\" rel=\"noopener\">Blitzortung.org</a> gönüllü ağı.",
-    txKicker: "UZAK VERİCİLER", txTitle: "Bu istasyon şunları yakaladı",
-    txNote: "Bu vericiler binlerce kilometre ötede ve hepsi kulağın duyamayacağı kadar yüksek frekansta — duyulmazlar, <b>ölçülürler</b>. Aşağıdaki tablo, bir paspas sopası ve pil beslemeli iki transistörlü bir devrenin Rusya, Fransa, İngiltere, Almanya, ABD ve Türkiye vericilerini aynı anda algıladığını gösteriyor: sistemin çalıştığının doğrudan kanıtı.",
-    footHw: "Donanım: metal sopa anten + 10 cm referans prob · 2N5457 JFET + TL072 · pil beslemeli · PC hat girişi",
-    footSafety: "Bu bir alıcıdır, verici değildir. Antenler bina içindedir.",
-    stOnline: "Yayında", stOffline: "Bağlantı yok", stMock: "SİMÜLASYON",
-    thState: "Durum", thFreq: "Frekans", thStation: "İstasyon",
-    seen: "GÖRÜLDÜ", trace: "zayıf iz", none: "yok", unknown: "—",
-    scanNever: "Henüz tarama yapılmadı",
-    sumDetected: "algılanan istasyon", sumCountries: "ülke", sumFar: "en uzak",
-    scanAt: (d) => `Son tarama: ${d}`,
-    guide: [
-      { t: "Sferic", s: "Kısa \"çıt\" / çıtırtı", d: "Bir yıldırım deşarjının radyo darbesi. Binlerce km öteden gelebilir; en sık duyulan doğal sinyal. Şelalede tepeden dibe inen ince dikey çizgi." },
-      { t: "Tweek", s: "Metalik \"cıvık\" / kısa ıslık", d: "Yer–iyonosfer boşluğunda seken sferic. Düşük frekanslar geç vardığı için ses kuyruklu duyulur; şelalede ~1.7 kHz'e kıvrılan \"J\" harfi. Yalnızca gece." },
-      { t: "Whistler", s: "Aşağı inen uzun ıslık", d: "Yıldırım enerjisinin manyetosferde binlerce km dolaşıp dönmesi. Saniyeler süren, tizden pese kayan ıslık. Nadir; jeomanyetik aktiviteye bağlı." },
-      { t: "Dawn chorus", s: "Kuş cıvıltısı gibi", d: "Manyetosferdeki elektronlardan doğan koro. Şafağa yakın saatlerde, yüksek enlemlerde belirgin." },
-      { t: "Şebeke uğultusu", s: "Kalın sürekli vınlama", d: "50 Hz ve harmonikleri — doğal değil, evin elektriği. Temiz kanalda bastırılır; Ham'a geçince duyulur." },
-      { t: "Anahtarlamalı gürültü", s: "Cırtlak, sabit tonlar", d: "Şarj aleti, LED sürücü, monitör. Şelalede kımıldamayan yatay çizgiler. Referans prob bunları öğrenip ana kanaldan siler." }
-    ]
-  },
-  en: {
-    tagline: "Live natural radio from Ankara, Türkiye",
-    chanClean: "Clean", chanRaw: "Raw", volume: "Volume",
-    hintClean: "Adaptive cancellation on — shared interference removed",
-    hintRaw: "Raw antenna signal — no processing applied",
-    mAdaptive: "Adaptive cancel", mBand: "Band filter", mCoh: "Reference match", mUp: "Uptime",
-    specTitle: "Live spectrum", wfTitle: "Time · frequency waterfall",
-    modeEvent: "Events", modeAll: "All",
-    freeze: "Freeze", unfreeze: "Resume", perMin: "events/min",
-    jmode: "J hunt", jmodeOn: "J hunt ✓",
-    wfNote: "<b>Events</b> mode learns and subtracts the steady noise floor, leaving only genuine impulses; a sferic is a vertical line. The <b>J hunt</b> button shortens the analysis window and speeds up the scroll: since a tweek lasts 50-100 ms, only at this setting does its tail spread out horizontally and reveal the <b>J</b> hook near 1.7 kHz. Tweeks occur only at night.",
-    recKicker: "LOOK-BACK RECORDING", recTitle: "Capture the last 60 seconds",
-    recAudio: "Download audio", recImage: "Download waterfall",
-    recNote: "While the stream plays, the last 60 seconds are continuously buffered — press the button after you hear something interesting.",
-    recWait: "Buffer still filling… try again in a few seconds.",
-    recDone: "Saved.",
-    guideKicker: "WHAT AM I HEARING?", guideTitle: "Field guide to the sounds",
-    lxKicker: "LIVE LIGHTNING MAP", lxTitle: "Where do these clicks come from?",
-    lxTR: "Türkiye", lxEU: "Europe",
-    lxFallback: "The map could not be embedded here.",
-    lxOpen: "Open the map in a new tab",
-    lxNote: "Every <b>sferic</b> you hear is the radio pulse of one lightning discharge on this map. Nearby storms arrive as sharp clicks, distant ones as soft rumbles. A quiet map means a quiet band — the best listening happens while there is activity in the region. Data: <a href=\"https://www.blitzortung.org/\" target=\"_blank\" rel=\"noopener\">Blitzortung.org</a> volunteer network.",
-    txKicker: "DISTANT TRANSMITTERS", txTitle: "What this station has picked up",
-    txNote: "These transmitters are thousands of kilometres away and far above human hearing — they are not heard, they are <b>measured</b>. The table below shows a mop handle and a battery-powered two-transistor circuit detecting Russian, French, British, German, American and Turkish stations at once: direct proof that the chain works.",
-    footHw: "Hardware: metal-pole antenna + 10 cm reference probe · 2N5457 JFET + TL072 · battery powered · PC line input",
-    footSafety: "This is a receiver, not a transmitter. Antennas stay indoors.",
-    stOnline: "On air", stOffline: "No connection", stMock: "SIMULATION",
-    thState: "Status", thFreq: "Frequency", thStation: "Station",
-    seen: "DETECTED", trace: "faint trace", none: "not seen", unknown: "—",
-    scanNever: "No scan recorded yet",
-    sumDetected: "stations detected", sumCountries: "countries", sumFar: "farthest",
-    scanAt: (d) => `Last scan: ${d}`,
-    guide: [
-      { t: "Sferic", s: "Short click / crackle", d: "The radio pulse of a single lightning discharge, often thousands of km away. The most common natural signal; a thin vertical line on the waterfall." },
-      { t: "Tweek", s: "Metallic chirp", d: "A sferic that bounced inside the Earth–ionosphere waveguide. Low frequencies arrive late, giving it a tail — the \"J\" hook near 1.7 kHz. Night only." },
-      { t: "Whistler", s: "Long descending whistle", d: "Lightning energy that travelled along magnetic field lines through the magnetosphere and came back. Seconds long, gliding from high to low. Rare." },
-      { t: "Dawn chorus", s: "Like birdsong", d: "A chorus generated by electrons in the magnetosphere, strongest near dawn and at higher latitudes." },
-      { t: "Mains hum", s: "Thick continuous buzz", d: "50 Hz and its harmonics — not natural, just the building's wiring. Suppressed on the Clean channel, audible on Raw." },
-      { t: "Switching noise", s: "Harsh steady tones", d: "Phone chargers, LED drivers, monitors. Motionless horizontal lines on the waterfall. The reference probe learns these and subtracts them." }
-    ]
-  }
-};
-let lang = (localStorage.getItem("vlf-lang") || (navigator.language || "").slice(0, 2)) === "en" ? "en" : "tr";
-const t = () => I18N[lang];
+/* ============================ DİL ============================ */
+/* Dil motoru i18n.js'te: VLF_I18N.t(key) -> aktif katalog | EN yedeği | anahtar */
+const t = (key) => window.VLF_I18N.t(key);
+const fmtMsg = (key, vars) => window.VLF_I18N.fmt(key, vars);
+const i18nReady = () => window.VLF_I18N.ready;
 
-function applyLang() {
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const val = t()[el.dataset.i18n];
-    if (typeof val === "string") el.innerHTML = val;
-  });
-  document.querySelectorAll("#lang-box button").forEach((b) => b.classList.toggle("active", b.dataset.lang === lang));
-  hintEl.innerHTML = channel === "clean" ? t().hintClean : t().hintRaw;
-  freezeBtn.textContent = wf.frozen ? t().unfreeze : t().freeze;
-  renderGuide();
-  renderTx();
-  localStorage.setItem("vlf-lang", lang);
+/* ============================ TEMA ============================ */
+const THEME_META = { light: "#f2f6f3", dark: "#060d0b" };
+
+function applyTheme(theme, persist) {
+  document.documentElement.dataset.theme = theme;
+  const meta = document.querySelector("#meta-theme");
+  if (meta) meta.setAttribute("content", THEME_META[theme] || THEME_META.dark);
+  const btn = document.querySelector("#theme-toggle");
+  if (btn) btn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
+  if (persist) {
+    try { localStorage.setItem("vlf-theme", theme); } catch (e) { /* yok say */ }
+  }
 }
+
+(function initTheme() {
+  applyTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark", false);
+  const btn = document.querySelector("#theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+      applyTheme(next, true);
+    });
+  }
+  /* Kullanıcı elle seçim yapmadıysa sistem temasını canlı izle */
+  if (window.matchMedia) {
+    try {
+      const mq = matchMedia("(prefers-color-scheme: light)");
+      const onSystem = (ev) => {
+        let saved = null;
+        try { saved = localStorage.getItem("vlf-theme"); } catch (e) { /* yok say */ }
+        if (saved !== "light" && saved !== "dark") applyTheme(ev.matches ? "light" : "dark", false);
+      };
+      if (mq.addEventListener) mq.addEventListener("change", onSystem);
+      else if (mq.addListener) mq.addListener(onSystem);
+    } catch (e) { /* yok say */ }
+  }
+})();
 
 /* ========================== ELEMANLAR ========================== */
 const playBtn = document.querySelector("#play");
@@ -120,9 +65,9 @@ const statusLine = document.querySelector("#status-line");
 const liveDot = document.querySelector("#live-dot");
 const freezeBtn = document.querySelector("#wf-freeze");
 
-/* ===================== SES: iki akis, tek cikis ===================== */
-/* Kesintisiz gecis icin iki MP3 akisi ayni anda calisir; kanal degisince
-   sadece kazanc dugumleri swap edilir - yeniden baglanti/gecikme yok. */
+/* ===================== SES: iki akış, tek çıkış ===================== */
+/* Kesintisiz geçiş için iki MP3 akışı aynı anda çalışır; kanal değişince
+   sadece kazanç düğümleri swap edilir - yeniden bağlantı/gecikme yok. */
 let audioCtx = null;
 const players = {};   // { clean: {el, src, gain}, raw: {...} }
 let channel = "clean";
@@ -147,7 +92,7 @@ function buildAudio() {
   master.connect(audioCtx.destination);
   players.master = master;
 
-  // Kayit icin ayri hedef (MediaRecorder bunu dinler)
+  // Kayıt için ayrı hedef (MediaRecorder bunu dinler)
   try {
     recDest = audioCtx.createMediaStreamDestination();
     master.connect(recDest);
@@ -178,7 +123,7 @@ async function start() {
     playBtn.classList.add("playing");
     startRecorder();
   } catch (err) {
-    statusLine.textContent = `${t().stOffline} — ${err.message}`;
+    statusLine.textContent = `${t("stOffline")} — ${err.message}`;
     statusLine.classList.add("err");
   }
 }
@@ -198,19 +143,19 @@ chanBox.addEventListener("click", (ev) => {
   if (!btn) return;
   channel = btn.dataset.chan;
   chanBox.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === btn));
-  hintEl.innerHTML = channel === "clean" ? t().hintClean : t().hintRaw;
-  wf.baseline = null;                       // yeni kanalin tabani yeniden ogrenilsin
+  hintEl.innerHTML = channel === "clean" ? t("hintClean") : t("hintRaw");
+  wf.baseline = null;                       // yeni kanalın tabanı yeniden öğrenilsin
   if (players.clean) {
     const now = audioCtx.currentTime;
     ["clean", "raw"].forEach((k) => {
       const g = players[k].gain.gain;
       g.cancelScheduledValues(now);
-      g.setTargetAtTime(k === channel ? 1 : 0, now, 0.05);   // 50 ms yumusak gecis
+      g.setTargetAtTime(k === channel ? 1 : 0, now, 0.05);   // 50 ms yumuşak geçiş
     });
   }
 });
 
-/* ================= GERIYE DONUK KAYIT (son 60 sn) ================= */
+/* ================= GERİYE DÖNÜK KAYIT (son 60 sn) ================= */
 function startRecorder() {
   if (!recDest || recorder || typeof MediaRecorder === "undefined") return;
   try {
@@ -221,7 +166,7 @@ function startRecorder() {
       const cutoff = Date.now() - 65000;
       while (recChunks.length > 1 && recChunks[0].t < cutoff) recChunks.shift();
     };
-    recorder.start(1000);                 // saniyelik parcalar
+    recorder.start(1000);                 // saniyelik parçalar
   } catch (e) { recorder = null; }
 }
 function stopRecorder() {
@@ -241,17 +186,17 @@ function stamp() {
 }
 document.querySelector("#grab-audio").addEventListener("click", () => {
   const note = document.querySelector("#rec-note");
-  if (!recChunks.length) { note.textContent = t().recWait; return; }
+  if (!recChunks.length) { note.textContent = t("recWait"); return; }
   const blobs = recChunks.map((c) => c.blob);
   download(new Blob(blobs, { type: blobs[0].type || "audio/webm" }), `vlf_${channel}_${stamp()}.webm`);
-  note.textContent = t().recDone;
-  setTimeout(() => (note.innerHTML = t().recNote), 4000);
+  note.textContent = t("recDone");
+  setTimeout(() => (note.innerHTML = t("recNote")), 4000);
 });
 document.querySelector("#grab-image").addEventListener("click", () => {
   wf.canvas.toBlob((blob) => blob && download(blob, `waterfall_${stamp()}.png`));
 });
 
-/* ========================= DURUM / METRIK ========================= */
+/* ========================= DURUM / METRİK ========================= */
 const fmt = (v, unit = "") => (v === null || v === undefined || Number.isNaN(v) ? "—" : `${v}${unit}`);
 async function pollStatus() {
   try {
@@ -266,27 +211,32 @@ async function pollStatus() {
     const mm = String(Math.floor((up % 3600) / 60)).padStart(2, "0");
     document.querySelector("#m-up").textContent = `${hh}:${mm}`;
     const bits = [];
-    bits.push(s.online ? t().stOnline : t().stOffline);
-    if (s.mode === "mock") bits.push(t().stMock);
+    bits.push(s.online ? t("stOnline") : t("stOffline"));
+    if (s.mode === "mock") bits.push(t("stMock"));
     if (s.sample_rate) bits.push(`${(s.sample_rate / 1000).toFixed(0)} kHz`);
     if (s.band_hz) bits.push(`${s.band_hz[0]}–${s.band_hz[1]} Hz`);
-    if (typeof s.listeners === "number") bits.push(`${s.listeners} ${lang === "tr" ? "dinleyici" : "listeners"}`);
-    if (s.clipping) bits.push(lang === "tr" ? "KIRPILMA" : "CLIPPING");
+    if (typeof s.listeners === "number") bits.push(`${s.listeners} ${t("listeners")}`);
+    if (s.clipping) bits.push(t("clipping"));
     if (s.error) bits.push(String(s.error));
     statusLine.textContent = bits.join("  ·  ");
     statusLine.classList.toggle("err", !s.online || !!s.error);
   } catch (e) {
     liveDot.classList.remove("on");
-    statusLine.textContent = t().stOffline;
+    statusLine.textContent = t("stOffline");
     statusLine.classList.add("err");
   }
 }
-setInterval(pollStatus, 2000); pollStatus();
 
 /* ============================ REHBER ============================ */
 function renderGuide() {
   const box = document.querySelector("#guide-cards");
-  box.innerHTML = t().guide.map((g) => `
+  if (!box || !i18nReady()) return;
+  const cards = [0, 1, 2, 3, 4, 5].map((i) => ({
+    t: t(`guide${i}_t`),
+    s: t(`guide${i}_s`),
+    d: t(`guide${i}_d`),
+  }));
+  box.innerHTML = cards.map((g) => `
     <article class="card">
       <h3>${g.t}</h3>
       <p class="sound">${g.s}</p>
@@ -294,18 +244,25 @@ function renderGuide() {
     </article>`).join("");
 }
 
-/* ========================= VERICI TABLOSU ========================= */
+/* ========================= VERİCİ TABLOSU ========================= */
+function stationNote(s) {
+  const key = "station" + String(s.call || "").replace(/[^A-Za-z0-9]/g, "");
+  const localized = t(key);
+  if (localized !== key) return localized;      // katalogda çevirisi var
+  return s.note_tr || s.note_en || "";          // yedek: JSON'daki notlar
+}
+
 let txData = null;
 async function loadTx() {
   const valid = (d) => d && Array.isArray(d.stations) && d.stations.length;
-  // 1) Canli sunucu API'si
+  // 1) Canlı sunucu API'si
   try {
     const r = await fetch(api("/api/transmitters"), { cache: "no-store" });
     if (r.ok) {
       const d = await r.json();
       if (valid(d)) { txData = d; renderTx(); return; }
     }
-  } catch (e) { /* asagida yedek denenecek */ }
+  } catch (e) { /* aşağıda yedek denenecek */ }
   // 2) Statik yedek (API yoksa veya GitHub Pages'ta)
   try {
     const r2 = await fetch("transmitters.json", { cache: "no-store" });
@@ -314,19 +271,20 @@ async function loadTx() {
   } catch (e) { txData = null; }
   renderTx();
 }
+
 function renderTx() {
   const box = document.querySelector("#tx-table");
   const meta = document.querySelector("#scan-meta");
-  if (!box) return;
+  if (!box || !i18nReady()) return;
   if (!txData || !Array.isArray(txData.stations) || !txData.stations.length) {
     box.innerHTML = ""; if (meta) meta.textContent = "";
     const sb = document.querySelector("#tx-summary"); if (sb) sb.innerHTML = "";
     return;
   }
   meta.textContent = txData.meta && txData.meta.scanned_at
-    ? t().scanAt(txData.meta.scanned_at.replace("T", " "))
-    : t().scanNever;
-  // Ozet seridi
+    ? fmtMsg("scanAt", { d: txData.meta.scanned_at.replace("T", " ") })
+    : t("scanNever");
+  // Özet şeridi
   const hit = txData.stations.filter((s) => s.verdict === "seen" || s.verdict === "trace");
   const countries = new Set(hit.map((s) => s.country));
   const DIST = { RU: 2100, GB: 3200, IT: 1600, FR: 2700, DE: 2200, US: 8600, TR: 450, IS: 4600 };
@@ -335,26 +293,26 @@ function renderTx() {
   const sumBox = document.querySelector("#tx-summary");
   if (sumBox) {
     sumBox.innerHTML = hit.length ? `
-      <div class="tx-sum"><b>${hit.length}/${txData.stations.length}</b><span>${t().sumDetected.toUpperCase()}</span></div>
-      <div class="tx-sum"><b>${countries.size}</b><span>${t().sumCountries.toUpperCase()}</span></div>
-      <div class="tx-sum"><b>${far ? "~" + DIST[far.country].toLocaleString() + " km" : "—"}</b><span>${t().sumFar.toUpperCase()}${far ? " · " + far.call : ""}</span></div>` : "";
+      <div class="tx-sum"><b>${hit.length}/${txData.stations.length}</b><span>${t("sumDetected").toUpperCase()}</span></div>
+      <div class="tx-sum"><b>${countries.size}</b><span>${t("sumCountries").toUpperCase()}</span></div>
+      <div class="tx-sum"><b>${far ? "~" + DIST[far.country].toLocaleString() + " km" : "—"}</b><span>${t("sumFar").toUpperCase()}${far ? " · " + far.call : ""}</span></div>` : "";
   }
 
   const rows = txData.stations.map((s) => {
-    const label = t()[s.verdict] || s.verdict;
+    const label = t(s.verdict) || s.verdict;
     const snr = s.snr_db === null || s.snr_db === undefined ? "" : ` ${s.snr_db.toFixed(1)} dB`;
-    const note = lang === "tr" ? s.note_tr : s.note_en;
     return `<div class="tx-row">
       <span class="tx-call">${s.call}</span>
-      <span class="tx-note">${flag(s.country)} ${note}</span>
+      <span class="tx-note">${flag(s.country)} ${stationNote(s)}</span>
       <span class="tx-freq">${(s.freq_hz / 1000).toFixed(2)} kHz</span>
       <span class="tx-state ${s.verdict}">${label}${snr}</span>
     </div>`;
   }).join("");
   box.innerHTML = `<div class="tx-row head">
-      <span>${t().thStation}</span><span></span><span>${t().thFreq}</span><span>${t().thState}</span>
+      <span>${t("thStation")}</span><span></span><span>${t("thFreq")}</span><span>${t("thState")}</span>
     </div>` + rows;
 }
+
 function flag(cc) {
   if (!cc || cc.length !== 2) return "";
   return String.fromCodePoint(...[...cc.toUpperCase()].map((c) => 0x1f1a5 + c.charCodeAt(0)));
@@ -458,10 +416,10 @@ const jBtn = document.querySelector("#wf-jmode");
 if (jBtn) jBtn.addEventListener("click", () => {
   wf.jhunt = !wf.jhunt;
   jBtn.classList.toggle("active", wf.jhunt);
-  jBtn.textContent = wf.jhunt ? t().jmodeOn : t().jmode;
+  jBtn.textContent = wf.jhunt ? t("jmodeOn") : t("jmode");
   if (wf.jhunt) {
-    // Tweek 50-100 ms surer: pencereyi kisalt (zaman cozunurlugu),
-    // bandi daralt ve akisi hizlandir ki kanca yatayda yayilsin.
+    // Tweek 50-100 ms sürer: pencereyi kısalt (zaman çözünürlüğü),
+    // bandı daralt ve akışı hızlandır ki kanca yatayda yayılsın.
     if (wfAnalyser) wfAnalyser.fftSize = 512;            // ~10.7 ms pencere
     wf.maxFreq = 3000; wf.speed = 8; wf.sens = 1.5;
   } else {
@@ -475,7 +433,7 @@ if (jBtn) jBtn.addEventListener("click", () => {
 });
 if (freezeBtn) freezeBtn.addEventListener("click", () => {
   wf.frozen = !wf.frozen;
-  freezeBtn.textContent = wf.frozen ? t().unfreeze : t().freeze;
+  freezeBtn.textContent = wf.frozen ? t("unfreeze") : t("freeze");
   freezeBtn.classList.toggle("active", wf.frozen);
 });
 
@@ -506,31 +464,31 @@ function wfDraw() {
       for (let i = 0; i <= maxBin; i += 1) {
         const v = wfColumn[i];
         const diff = v - base[i];
-        // Taban: yukari yavas, asagi hizli. Sapma da ogrenilir (kendi gurultu olcegi)
+        // Taban: yukarı yavaş, aşağı hızlı. Sapma da öğrenilir (kendi gürültü ölçeği)
         base[i] += (diff > 0 ? 0.02 : 0.20) * diff;
         dev[i] += 0.02 * (Math.abs(diff) - dev[i]);
-        const thr = wf.sens * Math.max(2.5, dev[i]);     // her bin kendi gurultusune gore
+        const thr = wf.sens * Math.max(2.5, dev[i]);     // her bin kendi gürültüsüne göre
         const excess = diff - thr;
         if (excess > 0) { hits += 1; sum += excess; }
         out[i] = excess > 0 ? Math.min(255, 45 + excess * 7) : 0;
       }
 
-      // Sferic = ayni anda GENIS bir bant boyunca yukselme (dikey cizgi).
-      // Tek tuk bin parlamasi gurultudur; onu ele.
+      // Sferic = aynı anda GENİŞ bir bant boyunca yükselme (dikey çizgi).
+      // Tek tük bin parlaması gürültüdür; onu ele.
       const span = maxBin + 1;
       const nowT = performance.now();
       const fresh = nowT - (wf.lineUntil || 0) > 0;
       const minFrac = 0.25;
       const isLine = fresh && hits >= span * minFrac && sum / Math.max(hits, 1) > 1.5;
-      if (isLine) wf.lineUntil = nowT + (wf.jhunt ? 25 : 60);   // cizim: J avinda kuyruk devam edebilsin
+      if (isLine) wf.lineUntil = nowT + (wf.jhunt ? 25 : 60);   // çizim: J avında kuyruk devam edebilsin
       if (!isLine) {
-        out.fill(0);                                     // serpintiyi bastir
+        out.fill(0);                                     // serpintiyi bastır
       }
-      // isLine ise dokunma: gercek genlikler kalsin ki tweek kuyrugu (J) gorunsun
+      // isLine ise dokunma: gerçek genlikler kalsın ki tweek kuyruğu (J) görünsün
       col = out;
 
       const now = performance.now();
-      if (isLine && now - (wf.lastEvent || 0) > 400) {   // sayim: ayni darbeyi 400 ms icinde tekrar sayma
+      if (isLine && now - (wf.lastEvent || 0) > 400) {   // sayım: aynı darbeyi 400 ms içinde tekrar sayma
         wf.lastEvent = now;
         wf.events.push(now);
       }
@@ -559,21 +517,48 @@ function wfDraw() {
   } else if (!playing) {
     wfCtx.fillStyle = "#040a08"; wfCtx.fillRect(0, 0, w, h);
     wfCtx.fillStyle = "rgba(213,255,237,.4)";
-    wfCtx.font = "500 13px ui-monospace, monospace";
-    wfCtx.fillText(lang === "tr" ? "Şelale için yayını başlat (▶)" : "Press ▶ to start the waterfall", 18, h / 2);
+    wfCtx.font = "500 13px 'Open Sans', system-ui, sans-serif";
+    wfCtx.fillText(t("wfStart"), 18, h / 2);
   }
   requestAnimationFrame(wfDraw);
 }
 wfRelabel(); wfDraw();
 
-/* ============================ BASLAT ============================ */
-document.querySelector("#lang-box").addEventListener("click", (ev) => {
-  const b = ev.target.closest("button[data-lang]"); if (!b) return;
-  lang = b.dataset.lang;
-  applyLang();
+/* ==================== DİL SEÇİMİ + BAŞLATMA ==================== */
+const langSelect = document.querySelector("#lang-select");
+if (langSelect) {
+  langSelect.addEventListener("change", (ev) => window.VLF_I18N.set(ev.target.value));
+}
+
+/* Dil değişince statik data-i18n düğümlerini i18n.js halleder;
+   burada dinamik render'ları tazeliyoruz. */
+function refreshDynamicTexts() {
+  hintEl.innerHTML = channel === "clean" ? t("hintClean") : t("hintRaw");
+  if (freezeBtn) {
+    freezeBtn.textContent = wf.frozen ? t("unfreeze") : t("freeze");
+    freezeBtn.classList.toggle("active", !!wf.frozen);
+  }
+  if (jBtn) {
+    jBtn.textContent = wf.jhunt ? t("jmodeOn") : t("jmode");
+    jBtn.classList.toggle("active", !!wf.jhunt);
+  }
+}
+window.VLF_I18N.onChange(() => {
+  refreshDynamicTexts();
+  renderGuide();
+  renderTx();
+  if (i18nReady()) pollStatus();   // durum satırı da anında yeni dile dönsün
 });
 
-/* ====================== YILDIRIM HARITASI ====================== */
+window.VLF_I18N.init().then(() => {
+  refreshDynamicTexts();
+  renderGuide();
+  renderTx();
+  pollStatus();
+  setInterval(pollStatus, 2000);
+});
+
+/* ====================== YILDIRIM HARİTASI ====================== */
 const LX_VIEWS = {
   tr: "https://map.blitzortung.org/#6/39.2/35.2",     // Türkiye ve çevresi
   eu: "https://map.blitzortung.org/#4/48.0/15.0",     // Avrupa
@@ -589,7 +574,7 @@ function lxShow(view) {
   if (lxLink) lxLink.href = url;
   lxLoaded = false;
   lxFrame.src = url;
-  // Gomme engellenirse (X-Frame-Options) yedek karta dus
+  // Gömme engellenirse (X-Frame-Options) yedek karta düş
   setTimeout(() => { if (!lxLoaded && lxWrap) lxWrap.classList.add("failed"); }, 6000);
 }
 if (lxFrame) {
@@ -603,11 +588,9 @@ if (lxFrame) {
     box.querySelectorAll("button").forEach((x) => x.classList.toggle("active", x === b));
     lxShow(b.dataset.z);
   });
-  // Sayfa acilir acilmaz degil, gorunur olunca yukle (performans)
+  // Sayfa açılır açılmaz değil, görünür olunca yükle (performans)
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { lxShow("tr"); io.disconnect(); } });
   }, { rootMargin: "200px" });
   io.observe(lxWrap);
 }
-
-applyLang();

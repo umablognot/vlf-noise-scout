@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" dir="ltr" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>VLF Noise Scout — ev yapımı doğal radyo istasyonu</title>
 <meta name="description" content="Ankara'dan canlı VLF doğal radyo yayını: sferic, tweek, whistler. Ev yapımı iki kanallı aktif anten ve adaptif gürültü iptali." />
+<meta property="og:title" content="VLF Noise Scout — ev yapımı doğal radyo istasyonu" />
+<meta property="og:description" content="Ankara'dan canlı VLF doğal radyo yayını: sferic, tweek, whistler. İki kanallı aktif anten, adaptif gürültü iptali, canlı yıldırım haritası." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" id="meta-theme" content="#060d0b" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<script>
+/* Tema tercihini CSS yüklenmeden uygula (FOUC önleme) */
+(function () {
+  try {
+    var saved = localStorage.getItem("vlf-theme");
+    var theme = (saved === "light" || saved === "dark") ? saved
+      : (window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.dataset.theme = theme;
+  } catch (e) { document.documentElement.dataset.theme = "dark"; }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,23 +31,47 @@
 
   <header class="top">
     <div class="brand">
-      <span class="live-dot" id="live-dot"></span>
+      <span class="live-dot" id="live-dot" aria-hidden="true"></span>
       <div>
         <h1>VLF Noise Scout</h1>
         <p class="tag" data-i18n="tagline">Ankara'dan canlı doğal radyo yayını</p>
       </div>
     </div>
-    <div class="segmented" id="lang-box">
-      <button data-lang="tr" class="active" type="button">TR</button>
-      <button data-lang="en" type="button">EN</button>
+    <div class="top-actions">
+      <span class="select-wrap">
+        <select id="lang-select" class="lang-select" data-i18n-attr="aria-label:uiLanguage,title:uiLanguage" aria-label="Dil" title="Dil">
+          <option value="tr">Türkçe · TR</option>
+          <option value="en">English · EN</option>
+          <option value="es">Español · ES</option>
+          <option value="zh">中文 · ZH</option>
+          <option value="ja">日本語 · JA</option>
+          <option value="vi">Tiếng Việt · VI</option>
+          <option value="de">Deutsch · DE</option>
+          <option value="fr">Français · FR</option>
+          <option value="ru">Русский · RU</option>
+          <option value="az">Azərbaycanca · AZ</option>
+          <option value="kk">Қазақша · KK</option>
+          <option value="mn">Монгол · MN</option>
+          <option value="ta">தமிழ் · TA</option>
+          <option value="ku">Kurmancî · KU</option>
+          <option value="zza">Zazakî · ZZA</option>
+          <option value="yua">Maya t'aan · YUA</option>
+          <option value="fa">فارسی · FA</option>
+        </select>
+        <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <button id="theme-toggle" class="icon-btn" type="button" data-i18n-attr="aria-label:themeToggle,title:themeToggle" aria-label="Açık / karanlık tema" title="Açık / karanlık tema">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.5A8.3 8.3 0 0 1 9.5 3.8a8.3 8.3 0 1 0 10.7 10.7Z"/></svg>
+      </button>
     </div>
   </header>
 
   <section class="panel">
     <div class="player-row">
-      <button id="play" class="play" type="button" aria-label="Play">▶</button>
+      <button id="play" class="play" type="button" aria-label="Play / Pause">▶</button>
       <div class="player-meta">
-        <div class="segmented big" id="chan-box">
+        <div class="segmented big" id="chan-box" role="group">
           <button data-chan="clean" class="active" type="button" data-i18n="chanClean">Temiz</button>
           <button data-chan="raw" type="button" data-i18n="chanRaw">Ham</button>
         </div>
@@ -51,26 +94,26 @@
 
   <section class="panel">
     <div class="panel-head">
-      <div><span class="kicker">SPEKTRUM</span><h2 data-i18n="specTitle">Anlık spektrum</h2></div>
+      <div><span class="kicker" data-i18n="specKicker">Spektrum</span><h2 data-i18n="specTitle">Anlık spektrum</h2></div>
     </div>
-    <canvas id="spectrum"></canvas>
-    <div class="axis" id="spec-axis"><span>0</span><span>2k</span><span>4k</span><span>6k</span><span>8k</span><span>10k</span><span>12kHz</span></div>
+    <canvas id="spectrum" dir="ltr"></canvas>
+    <div class="axis" id="spec-axis" dir="ltr"><span>0</span><span>2k</span><span>4k</span><span>6k</span><span>8k</span><span>10k</span><span>12kHz</span></div>
   </section>
 
   <section class="panel">
     <div class="panel-head wrapping">
-      <div><span class="kicker">WATERFALL</span><h2 data-i18n="wfTitle">Zaman · frekans şelalesi</h2></div>
+      <div><span class="kicker" data-i18n="wfKicker">Şelale</span><h2 data-i18n="wfTitle">Zaman · frekans şelalesi</h2></div>
       <div class="controls">
-        <div class="segmented" id="wf-mode">
+        <div class="segmented" id="wf-mode" role="group">
           <button data-mode="olay" class="active" type="button" data-i18n="modeEvent">Olay</button>
           <button data-mode="ham" type="button" data-i18n="modeAll">Tümü</button>
         </div>
-        <div class="segmented" id="wf-zoom">
+        <div class="segmented" id="wf-zoom" role="group">
           <button data-max="12000" type="button">12k</button>
           <button data-max="6000" type="button">6k</button>
           <button data-max="3000" class="active" type="button">3k</button>
         </div>
-        <div class="segmented" id="wf-speed">
+        <div class="segmented" id="wf-speed" role="group">
           <button data-speed="1" type="button">1×</button>
           <button data-speed="2" class="active" type="button">2×</button>
           <button data-speed="4" type="button">4×</button>
@@ -81,7 +124,7 @@
       </div>
     </div>
     <div class="split">
-      <div class="split-main">
+      <div class="split-main" dir="ltr">
         <div class="wf-wrap">
           <canvas id="waterfall"></canvas>
           <div class="wf-labels" id="wf-labels" aria-hidden="true"></div>
@@ -91,7 +134,7 @@
       <div class="split-side">
         <div class="side-head">
           <span class="kicker" data-i18n="lxKicker">CANLI YILDIRIM HARİTASI</span>
-          <div class="segmented" id="lx-zoom">
+          <div class="segmented" id="lx-zoom" role="group">
             <button data-z="tr" class="active" type="button" data-i18n="lxTR">Türkiye</button>
             <button data-z="eu" type="button" data-i18n="lxEU">Avrupa</button>
           </div>
@@ -120,7 +163,7 @@
     <p class="note" id="rec-note" data-i18n="recNote">Yayın çalarken son 60 saniye sürekli tamponlanır; ilginç bir şey duyduğunuzda butona basmanız yeterli.</p>
   </section>
 
-<section class="panel">
+  <section class="panel">
     <div class="panel-head wrapping">
       <div><span class="kicker" data-i18n="txKicker">UZAK VERİCİLER</span><h2 data-i18n="txTitle">Bu istasyon şunları yakaladı</h2></div>
       <span class="scan-meta" id="scan-meta"></span>
@@ -141,6 +184,8 @@
   </footer>
 
 </div>
+<noscript><p class="noscript-note">Bu istasyon arayüzü JavaScript gerektirir. / This station interface requires JavaScript.</p></noscript>
+<script src="i18n.js"></script>
 <script src="config.js"></script>
 <script src="app.js"></script>
 </body>
