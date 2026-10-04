@@ -67,8 +67,16 @@ class AudioPipeline:
 
     def start(self) -> None:
         try:
-            self.raw_encoder.start()
-            self.clean_encoder.start()
+            # Kodlayıcılardan biri başlamazsa (ör. ffmpeg kurulu değil) tüm
+            # boru hattını öldürme: yakalama + DSP + metrikler çalışmaya devam
+            # etsin, arayüz hatayı durum satırında göstersin.
+            encoder_error: str | None = None
+            for encoder in (self.raw_encoder, self.clean_encoder):
+                try:
+                    encoder.start()
+                except Exception as exc:
+                    encoder.last_error = str(exc)
+                    encoder_error = encoder_error or f"MP3 encoder: {exc}"
             self.worker = threading.Thread(
                 target=self._process_loop, name="vlf-dsp", daemon=True
             )
@@ -80,7 +88,7 @@ class AudioPipeline:
                 self.source_thread.start()
             else:
                 self._start_sounddevice()
-            self._set_status(online=True)
+            self._set_status(online=True, error=encoder_error)
         except Exception as exc:
             self._set_status(online=False, error=str(exc))
 
