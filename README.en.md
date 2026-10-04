@@ -132,8 +132,8 @@ Step-by-step build guide: [`docs/PERTINAKS.en.md`](docs/PERTINAKS.en.md)
 
 ```
 server/vlf_stream/     capture, DSP, MP3 streaming, FastAPI server
-server/tools/          probe_check.py · verici_avi.py (transmitter hunt) · canli_seviye.py (live level meter)
-web/               station UI (TR/EN)
+server/tools/          probe_check.py · verici_avi.py (transmitter hunt) · canli_seviye.py (live level meter) · compile_translations.py
+web/               station UI (17 languages · light/dark theme)
 hardware/          BOM, commissioning checklist
 docs/              build guides, experiment protocol
 ```
@@ -165,6 +165,38 @@ Find the device index with `python -c "import sounddevice; print(sounddevice.que
 On Windows these indices **change** whenever devices are enabled/disabled — check every time.
 
 Try it without hardware: `VLF_MOCK_MODE=1`
+
+### Multilingual UI, theme and font
+
+The interface ships in **17 languages**: Türkçe, English, Español, 中文, 日本語,
+Tiếng Việt, Deutsch, Français, Русский, Azərbaycanca, Қазақша, Монгол, தமிழ்,
+Kurmancî, Zazakî, Maya t'aan and فارسی (right-to-left). Pick a language from
+the **dropdown** in the top-right corner; the choice persists in the browser
+and the visitor's browser language is auto-detected when nothing is saved.
+The **light / dark theme** toggle persists the same way and follows the
+system preference until changed manually. Text is set in **Open Sans**; the
+waterfall/spectrum screens stay dark in both themes (instrument display).
+
+Translations use the gettext (.po/.mo) format:
+
+```
+web/locales/<code>/LC_MESSAGES/messages.po   editable translation source
+web/locales/<code>/LC_MESSAGES/messages.mo   compiled catalog
+web/locales/<code>.json                      bundle fetched by the UI
+web/locales/messages.pot                     template for new languages
+```
+
+After editing .po files, refresh the .mo and .json bundles:
+
+```bash
+python server/tools/compile_translations.py web/locales --sync-po
+```
+
+To add a language: copy `messages.pot`, translate the 93 strings, save it as
+`web/locales/<code>/LC_MESSAGES/messages.po`, add the code to the language
+lists in `web/i18n.js` and `index.html`, then compile with `--sync-po`. CI
+verifies that every key set is complete and that .mo/.json stay in sync with
+the .po sources.
 
 ### Diagnostic tools
 

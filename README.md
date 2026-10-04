@@ -139,8 +139,8 @@ Adım adım kurulum rehberi: [`docs/PERTINAKS.md`](docs/PERTINAKS.md)
 
 ```
 server/vlf_stream/     ses yakalama, DSP, MP3 yayını, FastAPI sunucu
-server/tools/          probe_check.py · verici_avi.py · canli_seviye.py
-web/               istasyon arayüzü (TR/EN)
+server/tools/          probe_check.py · verici_avi.py · canli_seviye.py · compile_translations.py
+web/               istasyon arayüzü (17 dil · açık/karanlık tema)
 hardware/          BOM, devreye alma kontrol listesi
 docs/              kurulum rehberleri, deney protokolü
 ```
@@ -184,6 +184,37 @@ python tools/verici_avi.py --device 1 --seconds 60 --json ../data/son_tarama.jso
 `verici_avi.py --json` çıktısı web arayüzündeki verici tablosunu besler.
 Tarama için Windows ses girişini **96 kHz**'e almak gerekir (48 kHz'te tavan
 24 kHz olur ve üst vericiler menzil dışında kalır).
+
+### Çok dilli arayüz, tema ve font
+
+Arayüz **17 dilde** çalışır: Türkçe, English, Español, 中文, 日本語, Tiếng Việt,
+Deutsch, Français, Русский, Azərbaycanca, Қазақша, Монгол, தமிழ், Kurmancî,
+Zazakî, Maya t'aan ve فارسی (sağdan sola). Sağ üstteki **açılır menüden** dil
+seçilir; tercih tarayıcıda saklanır, hiç seçilmemişse tarayıcı dili otomatik
+algılanır. **Açık / karanlık tema** düğmesi aynı şekilde hatırlanır; elle
+seçim yapılmamışsa sistem tercihini izler. Metinler **Open Sans** ile dizilir;
+şelale/spektrum ekranları her iki temada da koyu kalır (ölçüm ekranı).
+
+Çeviriler gettext (.po/.mo) biçimindedir:
+
+```
+web/locales/<kod>/LC_MESSAGES/messages.po   çeviri kaynağı (elle düzenlenir)
+web/locales/<kod>/LC_MESSAGES/messages.mo   derlenmiş katalog
+web/locales/<kod>.json                      arayüzün çalışırken yüklediği paket
+web/locales/messages.pot                    yeni dil için şablon
+```
+
+.po dosyalarını düzenledikten sonra .mo ve .json paketlerini tazeleyin:
+
+```bash
+python server/tools/compile_translations.py web/locales --sync-po
+```
+
+Yeni dil eklemek için: `messages.pot`'tan kopyalayın, 93 anahtarı çevirin,
+`web/locales/<kod>/LC_MESSAGES/messages.po` olarak kaydedin; `web/i18n.js`
+ve `index.html` dil listesine kodu ekleyin; `--sync-po` ile derleyin.
+CI, her dilde anahtar kümesinin eksiksiz olduğunu ve .mo/.json'un .po ile
+senkron olduğunu doğrular.
 
 
 ## Canlı yayın nasıl çalışıyor?
